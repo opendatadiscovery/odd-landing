@@ -1,0 +1,15 @@
+.common {
+    background-color: $default-color;
+
+    &__title {
+        color: black;
+    }
+
+    &__answer {
+        color: black;
+    }
+}
+
+ul {
+    color: black;
+}

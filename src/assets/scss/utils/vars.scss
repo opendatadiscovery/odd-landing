@@ -1,0 +1,65 @@
+/* Vars:
+  ========================================================================== */
+
+// Font
+$mainFont                : 'Lato', Helvetica, Arial, sans-serif;
+
+
+// Size
+$mainFontColor           : #ffffff;
+$mainFontSize            : 16px;
+$mainFontWeight          : 300;
+$mainLineHeight          : 1.55;
+
+$desktopWidth            : 1280px;
+$smDesktopWidth          : 1024px;
+$tableWidth              : 768px;
+$smTableWidth            : 640px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;
+
+
+$iconWidth               : 40px;
+$smDesktopIconWidth      : 35px;
+
+
+
+
+/*
+  All colors taken from:
+*/
+
+// Main color
+$default-color           : #ffffff;
+$primary-color           : #444ce0;
+$success-color           : #26de81;
+$danger-color            : #fc5c65;
+$warning-color           : #fed330;
+$light-color             : #999999;
+$purple-color            : #8854d0;
+
+// Neutral Color
+$neutral-primary         : #303133;
+$neutral-regular         : #606266;
+$neutral-secondary       : #909399;
+$neutral-placeholder     : #C0C4CC;
+
+// Border Color
+$border-base             : #DCDFE6;
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
+
+// project colors
+
+$keycolor               : #2fcc71;
+$keycolor-light         : #4d3fff;
+$keycolor-lighten       : #3f69ff;
+$keycolor-red           : #f05b40;
+$keycolor-dark          : #2e2e2e;
+$keycolor-darken        : #291fa4;
+$yellow                 : #ffd85f;
+
+$first-reason           : #395ee0;
+$second-reason          : #3f69ff;
+$third-reason           : #4d12ee;

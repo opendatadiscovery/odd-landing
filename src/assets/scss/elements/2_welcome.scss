@@ -1,0 +1,23 @@
+.welcome {
+    &__title {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: rem(72px);
+        text-align: center;
+        line-height: rem(72px);
+    }
+
+    &__description {
+        display: inline-block;
+        margin-top: 30px;
+        font-size: rem(48px);
+        text-align: center;
+
+        &-author {
+            display: inline-block;
+            font-size: rem(36px);
+            text-align: center;
+            font-style: italic;
+        }
+    }
+}

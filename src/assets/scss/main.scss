@@ -1,0 +1,156 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/reset';
+
+/* site styles */
+@import 'elements/1_header.scss';
+@import 'elements/2_welcome.scss';
+@import 'elements/3_common.scss';
+@import 'elements/4_footer.scss';
+/* end site styles */
+
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-color: $keycolor;
+
+  overflow-x: hidden;
+
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section,
+.section {
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $desktopWidth;
+    @media screen and (max-width: $smDesktopWidth) {
+      max-width: $tableWidth;
+    }
+    @media screen and (max-width: $tableWidth) {
+      max-width: $phoneWidth;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      max-width: $smPhoneWidth;
+    }
+}
+
+.container {
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  margin: 0 auto;
+  max-width: $desktopWidth;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}
+
+
+
+.title__h2 {
+  font-weight: 700;
+  font-size: rem(42px);
+  line-height: 1.0;
+  display: inline-block;
+
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: rem(36px);
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    text-align: center;
+    font-size: rem(34px);
+  }
+
+  /* @media screen and (max-width: $smPhoneWidth) {
+    font-size: 1.2rem;
+  } */
+}
+
+
