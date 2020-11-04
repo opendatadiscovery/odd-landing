@@ -13,7 +13,7 @@
 // @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-SemiBold", 600);
 // @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Bold", 700);
 // @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ExtraBold", 800);
-@include font-face("Montserrat", "../../assets/fonts/Montserrat/Montserrat-Black");
+// @include font-face("Montserrat", "../../assets/fonts/Montserrat/Montserrat-Black");
 
 // Italic Montserrat:
 // @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ThinItalic", 100, italic);
@@ -65,5 +65,203 @@
 // @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansLightItalic", 300, italic);
 // @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansSemiBoldItalic", 600, italic);
 // @include font-face("OpenSans", "/assets/fonts/OpenSans/opensansBoldItalic", bold, italic);
+
+/* Webfont: LatoLatin-Black */
+@font-face {
+  font-family: 'LatoLatinWebBlack';
+  src: url('../fonts/LatoLatin/LatoLatin-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('../fonts/LatoLatin/LatoLatin-Black.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/LatoLatin/LatoLatin-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+// /* Webfont: LatoLatin-BlackItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebBlack';
+//   src: url('/assets/fonts/LatoLatin/LatoLatin-BlackItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('/assets/fonts/LatoLatin/LatoLatin-BlackItalic.woff') format('woff'), /* Modern Browsers */
+//        url('/assets/fonts/LatoLatin/LatoLatin-BlackItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Bold */
+// @font-face {
+//   font-family: 'LatoLatinWeb';
+//   src: url('/assets/fonts/LatoLatin/LatoLatin-Bold.woff2') format('woff2'), /* Modern Browsers */
+//        url('/assets/fonts/LatoLatin/LatoLatin-Bold.woff') format('woff'), /* Modern Browsers */
+//        url('/assets/fonts/LatoLatin/LatoLatin-Bold.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: bold;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-BoldItalic */
+// @font-face {
+//   font-family: 'LatoLatinWeb';
+//   src: url('fonts/LatoLatin-BoldItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-BoldItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-BoldItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: bold;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Hairline */
+// @font-face {
+//   font-family: 'LatoLatinWebHairline';
+//   src: url('fonts/LatoLatin-Hairline.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Hairline.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Hairline.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-HairlineItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebHairline';
+//   src: url('fonts/LatoLatin-HairlineItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-HairlineItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-HairlineItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Heavy */
+// @font-face {
+//   font-family: 'LatoLatinWebHeavy';
+//   src: url('fonts/LatoLatin-Heavy.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Heavy.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Heavy.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-HeavyItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebHeavy';
+//   src: url('fonts/LatoLatin-HeavyItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-HeavyItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-HeavyItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Italic */
+// @font-face {
+//   font-family: 'LatoLatinWeb';
+//   src: url('fonts/LatoLatin-Italic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Italic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Italic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Light */
+// @font-face {
+//   font-family: 'LatoLatinWebLight';
+//   src: url('fonts/LatoLatin-Light.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Light.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Light.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-LightItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebLight';
+//   src: url('fonts/LatoLatin-LightItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-LightItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-LightItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Medium */
+// @font-face {
+//   font-family: 'LatoLatinWebMedium';
+//   src: url('fonts/LatoLatin-Medium.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Medium.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Medium.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-MediumItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebMedium';
+//   src: url('fonts/LatoLatin-MediumItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-MediumItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-MediumItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Regular */
+// @font-face {
+//   font-family: 'LatoLatinWeb';
+//   src: url('fonts/LatoLatin-Regular.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Regular.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Regular.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Semibold */
+// @font-face {
+//   font-family: 'LatoLatinWebSemibold';
+//   src: url('fonts/LatoLatin-Semibold.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Semibold.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Semibold.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-SemiboldItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebSemibold';
+//   src: url('fonts/LatoLatin-SemiboldItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-SemiboldItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-Thin */
+// @font-face {
+//   font-family: 'LatoLatinWebThin';
+//   src: url('fonts/LatoLatin-Thin.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Thin.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-Thin.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
+
+// /* Webfont: LatoLatin-ThinItalic */
+// @font-face {
+//   font-family: 'LatoLatinWebThin';
+//   src: url('fonts/LatoLatin-ThinItalic.woff2') format('woff2'), /* Modern Browsers */
+//        url('fonts/LatoLatin-ThinItalic.woff') format('woff'), /* Modern Browsers */
+//        url('fonts/LatoLatin-ThinItalic.ttf') format('truetype');
+//   font-style: italic;
+//   font-weight: normal;
+//   text-rendering: optimizeLegibility;
+// }
 
 

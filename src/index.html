@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/dfy2vbt.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <title>Internship programm</title>
   </head>
@@ -37,16 +37,102 @@
   <section class="common">
     <div class="container">
       <h2 class="common__title title__h2">Block 1: Common</h2>
-      <ul class="common__list">
+      <ul class="common__list text">
         <li class="common__item">
           <p class="common__question">1. What are primitives? How can developers use them?</p>
-          <div>Answer</div>
+          <a href="hidden1" class="clicker" onclick="view('hidden1'); return false">Answer. Click me!</a>
+          <div class="common__answer" id="hidden1" style="display: none;">
+            <p class="common__text text">
+              Ответ: примитивы - это данные, но не объекты и не имеют методов.
+            </p>
+            <ul class="common__text-list text">Например, примитивами являются типы данных:
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  1. Строки.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: изменить созданную строку нельзя, можно создать новую строку полностью (или частично) копирую старую. Можем складывать строки (конкатенация).
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  2. Числа.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: можем применять математические операции ( например, [+, -, *, /] ).
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  3. Логические значения.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: хранение логических значений да/нет (true/false).
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  4. null.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: единственное в своем типе значение, которое ничего из себя не представляет ( по смыслу: null === ничего ).
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  5. undefined.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: единственное в своем типе значение, которое значит, что значение не было присвоено, например, переменной.
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  6. Оооочень большие числа (BigInt).
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: математические операции с очень большими числами, например для точных вычислений.
+                </p>
+              </li>
+              <li class="common__text-item">
+                <p class="common__text text text_bold">
+                  7. Символы.
+                </p>
+                <p class="common__text text text_italic">
+                  Использование: с помощью символов мы можем создавать уникальные идентификаторы. Например, для создания уникальных свойств объекта.
+                </p>
+              </li>
+            </ul>
+            <div class="common__answer">
+              <p class="common__text text text_indent">
+                Мы можем присваивать переменной различные примитивные значения, но сами примитивы мы не можем изменять.
+                Очень мучался над вопросом: "Ведь к примитивам тоже применяются методы, например <code>'str'.toUpperCase();</code>? Как так?"
+                После долгих чтений литературы и раздумий пришел вот к какому выводу и, надеюсь, он верный.
+              </p>
+              <p class="common__text text text_indent">
+                Объясню на примере:
+                <br>
+                <code>let str = 'string';</code> // присваиваем переменной примитивное строковое значение
+                <br>
+                <code>str.toUpperCase();</code> // "как-бы" применяем метод к переменной, содержащей строковое значение. На самом деле интерпретатор <b>временно</b> и самостоятельно преобразует примитив в объект, а уже у объекта ( в данном случае <code>String()</code> ) мы можем использовать методы ( в данном случае <code>.toUpperCase()</code> ).
+                <br>
+                <code>console.log( str.toUpperCase() )</code> // в консоли отобразится результат вызова метода - <code>'STRING'</code>
+                <br>
+                <code>console.log( str )</code> // в консоли отобразится - <code>'string'</code>. Таким образом подтверждаем, что исходный примитив мы не можем изменить т.к. не изменилось значение переменной <code>str</code>. А результат "применения" метода к примитиву ( <code>str.toUpperCase()</code> ) существует только пока существует функция-обертка, фактически преобразующая примитив в объект, чтобы было возможно приметь методы.
+              </p>
+          </div>
+          </div>
         </li>
         <li class="common__item">
-          <p class="common__question">1. What are primitives? How can developers use them?</p>
-          <a href="#hidden1" onclick="view('hidden1'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden1" style="display: none;">
-            Залупа
+          <p class="common__question">2. What does keyword `this` mean?</p>
+          <a href="#hidden2" class="clicker" onclick="view('hidden2'); return false">Answer. Click me!</a>
+          <div class="common__answer" id="hidden2" style="display: none;">
+            <p class="common__text text">
+              Ответ: <code>this</code> - это ссылка на объект, в контексте которого используется это ключевое слово.
+              Если в объекте есть вложенные объекты, то <code>this</code> будет ссылаться на ближайший к нему родительский объект.
+              Мы можем устанавливать (менять) контекст окружения <code>this</code>, например, с помощью методов <code>call()</code>, <code>apply()</code> или <code>bind()</code>.
+              <code>this</code> позволяет масштабировать приложение и избегать дублирование кода, например, при использовании <code>this</code> в функциях-конструкторах и далее при создании однотипных объектов на основе этого конструктора.
+            </p>
           </div>
         </li>
         <li class="common__item">
@@ -65,5 +151,10 @@
     </div>
   </section>
 </body>
+
+<script>function view(n) {
+  style = document.getElementById(n).style;
+  style.display = (style.display == 'block') ? 'none' : 'block';
+}</script>
 
 </html>

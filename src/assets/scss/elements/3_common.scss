@@ -1,15 +1,47 @@
 .common {
     background-color: $default-color;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;  
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 20%;
+        width: 300px;
+        height: 100%;
+        transform: skew(-15deg);
+            -webkit-transform: skew(-15deg);
+            -moz-transform: skew(-15deg);
+            -o-transform: skew(-15deg);
+        background-color: $keycolor;
+        
+    }
 
     &__title {
-        color: black;
+        color: $keycolor-dark;
     }
+
+    &__list {
+        margin-top: rem(20px);
+    }
+
+    &__item {
+        margin-top: rem(20px);
+    }
+
+/*     &__question {
+
+    } */
 
     &__answer {
-        color: black;
+        margin-top: rem(20px);
+        color: $keycolor-dark;
+        padding-left: rem(20px);
     }
-}
 
-ul {
-    color: black;
+    &__text-list {
+        padding-left: rem(20px);
+    }
 }
