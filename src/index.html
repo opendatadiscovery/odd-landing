@@ -189,8 +189,23 @@
           </div>
         </li>
         <li class="common__item">
-          <p class="common__question">1. What are primitives? How can developers use them?</p>
-          <div>Answer</div>
+          <p class="common__question">5. Compare spread and rest operators.</p>
+          <a href="#hidden5" class="clicker" onclick="view('hidden5'); return false">Answer. Click me!</a>
+          <div class="common__answer" id="hidden5" style="display: none;">
+            <p class="common__text text">
+              Ответ: оба из представленных операторов, и rest (остаточные парамемтры), и spread (оператор расширения) обозначаются тремя точкам <code>...</code>. 
+              <br>
+              Rest operator используется, когда мы не знаем точно сколько будет параметров у функции. Тогда мы можем объявить функцию следующим образом: 
+              <br>
+              <code>function sum(a, b, c, ...args)</code> // rest operator <code>...</code> соберет оставшиеся пока неизвестные параметры в массив args для дальнейшего их использования. 
+              Rest operator всегда записывается на последнем месте в списке параметров функции.
+            </p>
+            <p class="common__text text">
+              Spread operator, хоть и записывается также через троеточие, но выполняет противоположную функцию. Он "расширяет", например, массив параметров в вызове функции. Spread operator
+              в принципе "расширяет" любой элемент, который можно перебрать (в дополнение к массивам - строки, объекты). Также, с помощью этого оператора можно соединить несколько массивов или 
+              представить строку в виде массива элементов.
+            </p>
+          </div>
         </li>
       </ul>
     </div>
