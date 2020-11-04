@@ -13,3 +13,4 @@ onclick="view('hidden1'); return false"
 /* clicker.onclick = function() {
     hidden.classList.toggle('shown')
 } */
+

@@ -148,8 +148,45 @@
           </div>
         </li>
         <li class="common__item">
-          <p class="common__question">1. What are primitives? How can developers use them?</p>
-          <div>Answer</div>
+          <p class="common__question">4. What is function declaration and how do its types differ?</p>
+          <a href="#hidden4" class="clicker" onclick="view('hidden4'); return false">Answer. Click me!</a>
+          <div class="common__answer" id="hidden4" style="display: none;">
+            <p class="common__text text">
+              Ответ: функция, объявленная как Function Declaration доступна для выполнения из любой части скрипта. Потому что интерпретатор сначала пробегается по всему коду
+              в поисках Function Declaration и создает эти функции. Например:
+              <br>
+              <code>
+                test(); //выведет 'I can work from any place!'
+                <br>
+                <br>
+                function test() {
+                  <br>
+                <div style="margin-left: 20px;">alert('I can work from any place!');</div> 
+                }
+              </code>
+              Function Declaration будет иметь область видимости, ограниченную скобками <code>{ ... }</code>, если объявлена внутри них и используется <code>'strict mode'</code>.
+            </p>
+            <p class="common__text text">
+              Также мы можем объявить функцию, как Function Expression, например:
+              <br>
+              <code>
+                test(); // ошибка test is not defined
+                <br>
+                <br>
+                let test = function() {
+                  <br>
+                <div style="margin-left: 20px;">alert('I can't work from any place...');</div> 
+                };
+              </code>
+              <br>
+              Но при таком объявлении функции интерпретатор создаст ее только когда дойдет до правой части выражения <code>let test = ...</code>,
+              а это значит, что обращаться к данной функции мы можем только в коде ниже ее объявления. 
+              <br>
+              Также можно объявить анонимную функцию (без имени), например, такие функции применяются в виде callback-функций (вопрос №3).
+              Еще есть самовызывающиеся аноонимные функции, но на практике сам пока не встречал их применения. Чаще пользуюсь Function Declaration.
+
+            </p>
+          </div>
         </li>
         <li class="common__item">
           <p class="common__question">1. What are primitives? How can developers use them?</p>
