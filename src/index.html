@@ -207,9 +207,227 @@
             </p>
           </div>
         </li>
+        <li class="common__item">
+          <p class="common__question">6. Code task</p>
+          <a href="#hidden6" class="clicker" onclick="view('hidden6'); return false">Answer. Click me!</a>
+          <div class="common__answer" id="hidden6" style="display: none;">
+            <p class="common__text text">
+              Ответ: 
+              <pre>
+                let foo = {
+                  count: 0,
+                  foo() {
+                      this.count++;
+                  }
+              }
+                
+                for(let i = 0; i < 10; i++) {
+                  foo.foo()
+                  console.assert(foo.count === 10)
+              }
+              </pre>
+            </p>
+          </div>
+        </li>
       </ul>
     </div>
   </section>
+
+  <section class="async">
+    <div class="container align_right">
+      <h2 class="async__title title__h2">Block 2: Async</h2>
+      <ul class="async__list text">
+        <li class="async__item">
+          <p class="async__question">1. JavaScript, is it synchronous or not?</p>
+          <a href="hidden7" class="clicker" onclick="view('hidden7'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden7" style="display: none;">
+            <p class="async__text text">
+              Ответ: примитивы - это данные, но не объекты и не имеют методов.
+            </p>
+            <ul class="async__text-list text">Например, примитивами являются типы данных:
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  1. Строки.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: изменить созданную строку нельзя, можно создать новую строку полностью (или частично) копирую старую. Можем складывать строки (конкатенация).
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  2. Числа.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: можем применять математические операции ( например, [+, -, *, /] ).
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  3. Логические значения.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: хранение логических значений да/нет (true/false).
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  4. null.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: единственное в своем типе значение, которое ничего из себя не представляет ( по смыслу: null === ничего ).
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  5. undefined.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: единственное в своем типе значение, которое значит, что значение не было присвоено, например, переменной.
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  6. Оооочень большие числа (BigInt).
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: математические операции с очень большими числами, например для точных вычислений.
+                </p>
+              </li>
+              <li class="async__text-item">
+                <p class="async__text text text_bold">
+                  7. Символы.
+                </p>
+                <p class="async__text text text_italic">
+                  Использование: с помощью символов мы можем создавать уникальные идентификаторы. Например, для создания уникальных свойств объекта.
+                </p>
+              </li>
+            </ul>
+            <div class="async__answer">
+              <p class="async__text text text_indent">
+                Мы можем присваивать переменной различные примитивные значения, но сами примитивы мы не можем изменять.
+                Очень мучался над вопросом: "Ведь к примитивам тоже применяются методы, например <code>'str'.toUpperCase();</code>? Как так?"
+                После долгих чтений литературы и раздумий пришел вот к какому выводу и, надеюсь, он верный.
+              </p>
+              <p class="async__text text text_indent">
+                Объясню на примере:
+                <br>
+                <code>let str = 'string';</code> // присваиваем переменной примитивное строковое значение
+                <br>
+                <code>str.toUpperCase();</code> // "как-бы" применяем метод к переменной, содержащей строковое значение. На самом деле интерпретатор <b>временно</b> и самостоятельно преобразует примитив в объект, а уже у объекта ( в данном случае <code>String()</code> ) мы можем использовать методы ( в данном случае <code>.toUpperCase()</code> ).
+                <br>
+                <code>console.log( str.toUpperCase() )</code> // в консоли отобразится результат вызова метода - <code>'STRING'</code>
+                <br>
+                <code>console.log( str )</code> // в консоли отобразится - <code>'string'</code>. Таким образом подтверждаем, что исходный примитив мы не можем изменить т.к. не изменилось значение переменной <code>str</code>. А результат "применения" метода к примитиву ( <code>str.toUpperCase()</code> ) существует только пока существует функция-обертка, фактически преобразующая примитив в объект, чтобы было возможно приметь методы.
+              </p>
+          </div>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">2. What is the key principle of Call Stack?</p>
+          <a href="#hidden8" class="clicker" onclick="view('hidden8'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden8" style="display: none;">
+            <p class="async__text text">
+              Ответ: <code>this</code> - это ссылка на объект, в контексте которого используется это ключевое слово.
+              Если в объекте есть вложенные объекты, то <code>this</code> будет ссылаться на ближайший к нему родительский объект.
+              Мы можем устанавливать (менять) контекст окружения <code>this</code>, например, с помощью методов <code>call()</code>, <code>apply()</code> или <code>bind()</code>.
+              <code>this</code> позволяет масштабировать приложение и избегать дублирование кода, например, при использовании <code>this</code> в функциях-конструкторах и далее при создании однотипных объектов на основе этого конструктора.
+            </p>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">3. What does AJAX mean?</p>
+          <a href="#hidden9" class="clicker" onclick="view('hidden9'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden9" style="display: none;">
+            <p class="async__text text">
+              Ответ: callback-функция - это функция, которая будет выполнена после завершения работы другой функции. 
+              В исходную функцию (для выполнения которой необходимо какое-то время, например, запрос данных на стороннем сервере) одним из аргументов 
+              передается callback-функция, которая будет вызвана по завершению действия исходной функции. Таким образом мы можем не переживать, что 
+              callback-функция останется без необходимых данных (которым нужно время, чтобы прийти с сервера), а начнет свое выполнение после выполнения исходной функции.
+            </p>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">4. Promise hell. How would you solve it?</p>
+          <a href="#hidden10" class="clicker" onclick="view('hidden10'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden10" style="display: none;">
+            <p class="async__text text">
+              Ответ: функция, объявленная как Function Declaration доступна для выполнения из любой части скрипта. Потому что интерпретатор сначала пробегается по всему коду
+              в поисках Function Declaration и создает эти функции. Например:
+              <br>
+              <code>
+                test(); //выведет 'I can work from any place!'
+                <br>
+                <br>
+                function test() {
+                  <br>
+                <div style="margin-left: 20px;">alert('I can work from any place!');</div> 
+                }
+              </code>
+              Function Declaration будет иметь область видимости, ограниченную скобками <code>{ ... }</code>, если объявлена внутри них и используется <code>'strict mode'</code>.
+            </p>
+            <p class="async__text text">
+              Также мы можем объявить функцию, как Function Expression, например:
+              <br>
+              <code>
+                test(); // ошибка test is not defined
+                <br>
+                <br>
+                let test = function() {
+                  <br>
+                <div style="margin-left: 20px;">alert('I can't work from any place...');</div> 
+                };
+              </code>
+              <br>
+              Но при таком объявлении функции интерпретатор создаст ее только когда дойдет до правой части выражения <code>let test = ...</code>,
+              а это значит, что обращаться к данной функции мы можем только в коде ниже ее объявления. 
+              <br>
+              Также можно объявить анонимную функцию (без имени), например, такие функции применяются в виде callback-функций (вопрос №3).
+              Еще есть самовызывающиеся аноонимные функции, но на практике сам пока не встречал их применения. Чаще пользуюсь Function Declaration.
+
+            </p>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">5. How would you handle exceptions in JS? Two options.</p>
+          <a href="#hidden11" class="clicker" onclick="view('hidden11'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden11" style="display: none;">
+            <p class="async__text text">
+              Ответ: оба из представленных операторов, и rest (остаточные парамемтры), и spread (оператор расширения) обозначаются тремя точкам <code>...</code>. 
+              <br>
+              Rest operator используется, когда мы не знаем точно сколько будет параметров у функции. Тогда мы можем объявить функцию следующим образом: 
+              <br>
+              <code>function sum(a, b, c, ...args)</code> // rest operator <code>...</code> соберет оставшиеся пока неизвестные параметры в массив args для дальнейшего их использования. 
+              Rest operator всегда записывается на последнем месте в списке параметров функции.
+            </p>
+            <p class="async__text text">
+              Spread operator, хоть и записывается также через троеточие, но выполняет противоположную функцию. Он "расширяет", например, массив параметров в вызове функции. Spread operator
+              в принципе "расширяет" любой элемент, который можно перебрать (в дополнение к массивам - строки, объекты). Также, с помощью этого оператора можно соединить несколько массивов или 
+              представить строку в виде массива элементов.
+            </p>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">6. What framework would you choose for development? Explain why.</p>
+          <a href="#hidden12" class="clicker" onclick="view('hidden12'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden12" style="display: none;">
+            <p class="async__text text">
+              Ответ: 
+            </p>
+          </div>
+        </li>
+        <li class="async__item">
+          <p class="async__question">7. Code task</p>
+          <a href="#hidden13" class="clicker" onclick="view('hidden13'); return false">Answer. Click me!</a>
+          <div class="async__answer" id="hidden13" style="display: none;">
+            <p class="async__text text">
+              Ответ: 
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 </body>
 
 <script>function view(n) {

@@ -1,16 +1,45 @@
 'use strict'
 
-/* let clicker = document.querySelectorAll('.click');
-let hidden = document.querySelectorAll('.hidden'); */
-
-let view = function(n) {
-    style = document.getElementById(n).style;
-    style.display = (style.display == 'block') ? 'none' : 'block';
+/* function foo() {
+    this.count++
 }
+  
+let Foo = {
+    count: 0,
+}
+  
+for(let i = 0; i < 10; i++) {
+    foo.bind(Foo)()
+    console.assert(Foo.count === 10)
+} */
+  
+  
 
-onclick="view('hidden1'); return false"
+//////////////////////////////////////////////
 
-/* clicker.onclick = function() {
-    hidden.classList.toggle('shown')
+/* let foo = {
+    count: 0,
+    foo() {
+        this.count++;
+    }
+}
+  
+  for(let i = 0; i < 10; i++) {
+    foo.foo()
+    console.assert(foo.count === 10)
 } */
 
+//////////////////////////////////////////////
+
+/* let foo = {
+    foo() {
+        this.count++;
+    }
+}
+
+foo.count = 0;
+  
+  for(let i = 0; i < 10; i++) {
+    foo.foo()
+    console.assert(foo.count === 10)
+} */

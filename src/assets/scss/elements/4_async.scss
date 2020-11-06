@@ -1,0 +1,28 @@
+.async {
+    background-color: $keycolor;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;  
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 20%;
+        width: 300px;
+        height: 100%;
+        transform: skew(15deg);
+            -webkit-transform: skew(15deg);
+            -moz-transform: skew(15deg);
+            -o-transform: skew(15deg);
+        background-color: $default-color;
+    }
+
+    &__answer {
+        text-align: justify;
+    }
+}
+
+.align_right {
+    text-align: right;
+}

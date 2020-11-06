@@ -1,4 +1,5 @@
-.common {
+.common,
+.async {
     background-color: $default-color;
     width: 100%;
     min-height: 100%;
@@ -36,6 +37,7 @@
     } */
 
     &__answer {
+        text-align: justify;
         margin-top: rem(20px);
         color: $keycolor-dark;
         padding-left: rem(20px);
