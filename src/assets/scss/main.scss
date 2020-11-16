@@ -185,10 +185,20 @@ code {
 }
 
 pre {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
   white-space: pre-wrap;
-    background: hsl(30,80%,90%);
+  word-break: break-word;
+  background: rgba(242, 242, 242, 1);
+  border-radius: 15px;
 }
 
+.code__examples {
+  flex: 1 1 auto;
+  text-align: left;
+}
 
 
 

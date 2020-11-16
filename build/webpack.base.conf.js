@@ -14,6 +14,7 @@
   const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
   const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+  require('babel-polyfill');
   
   // Main const
   const PATHS = {
@@ -34,7 +35,7 @@
       paths: PATHS
     },
     entry: {
-      app: PATHS.src
+      app: ['babel-polyfill', PATHS.src]
       // module: `${PATHS.src}/your-module.js`,
     },
     output: {

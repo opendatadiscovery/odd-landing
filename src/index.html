@@ -264,8 +264,110 @@
           <a href="#hidden10" class="clicker" onclick="view('hidden10'); return false">Answer. Click me!</a>
           <div class="async__answer" id="hidden10" style="display: none;">
             <p class="async__text text">
-              Ответ: 
+              Ответ: если у нас присутствует вложенность промисов, зависящих друг от друга напрямую, как в примере ниже, то <br>
             </p>
+<pre>
+  <span class="code__examples">
+    onloadData()
+      .then((dataItem) => {                  
+        return formatedData(dataItem)                  
+          .then((clientData) => {                  
+            return print(clientData);                  
+          });                  
+        });
+  </span>
+</pre>
+            <p class="async__text text">
+              мы можем упростить код за счет избежания вложенности, т.к. метод <code>.data()</code> возвращает промис и синтаксис стрелочных функций позволяет не писать <code>return</code>,
+              если в функции один параметр. Результат ниже:
+            </p>
+<pre>
+  <span class="code__examples">
+    onloadData()
+      .then( dataItem => formatedData(dataItem) )                 
+      .then( clientData => print(clientData) );              
+  </span>
+</pre>
+            <p class="async__text text">
+              Если же промисы не завистя друг от друга, то возможно два варианта развития. Например, есть три функции, возвращающие промисы <code>cookFood()</code>, 
+              <code>sendParcelTo(name)</code> и <code>cleanHouse()</code>. Ад промисов будет выглядеть так:
+            </p>
+<pre>
+  <span class="code__examples">
+    cookFood()
+      .then( () => {                  
+        return sendParcelTo('Gloria Gaynor')                  
+          .then( () => {                  
+            return cleanHouse();                  
+          });                  
+        });
+  </span>
+</pre>
+            <p class="async__text text">
+              В зависимости от того - важен ли нам порядок выполнения промисов или нет, можно упростить код следующим образом. Если порядок не важен, то воспользуемся методом
+              <code>Promise.all()</code>, который возвращает промис, когда выполнятся все промисы, переданные ему в качестве аргумента. Получится такой код:
+            </p>
+<pre>
+  <span class="code__examples">
+    Promise.all([
+      cookFood(),
+      sendParcelTo('Gloria Gaynor'),
+      cleanHouse()
+    ]);
+  </span>
+</pre>
+            <p class="async__text text">
+              Если же нам важен порядок выполнения независимых друг от друга промисов, то можем записать в таком виде (порядок выбран произвольный):
+            </p>
+<pre>
+  <span class="code__examples">
+    cookFood()
+      .then( () => sendParcelTo('Gloria Gaynor') )
+      .then( () => cleanHouse() );
+  </span>
+</pre>
+            <p class="async__text text">
+              Может возникнуть ситуация, когда у нас есть несколько зависящих друг от друга промисов. Например, есть четыре функции, возвращающие промисы <code>goFoodShopping()</code>, 
+              <code>buyProducts(shop)</code>, <code>buySpices(shop)</code> и <code>cookBestFood()</code>. Ад промисов будет выглядеть так:
+            </p>
+<pre>
+  <span class="code__examples">
+    goFoodShopping()
+      .then( (shop) => {
+        return buyProducts(shop)
+          .then( (products) => {
+            return buySpices(shop)
+              .then( (spices) => {
+                return cookBestFood(products, spices);
+              });
+            });
+          });  
+  </span>
+</pre>
+            <p class="async__text text">
+              Упростим этот код, ведь ссылки промисы можно сохранять в переменные:
+            </p>
+<pre>
+  <span class="code__examples">
+    const shopPromise = goFoodShopping()
+
+    const productsPromise = shopPromise
+      .then(buyProducts);
+
+    const spicesPromise = shopPromise
+      .then(buySpices);
+
+    Promise.all([
+      productsPromise,
+      spicesPromise
+    ])
+      .then( (values) => {
+        const products = values[0];
+        const spices = values[1];
+        return cookBestFood(products, spices);
+      });
+  </span>
+</pre>
           </div>
         </li>
         <li class="async__item">
@@ -273,17 +375,14 @@
           <a href="#hidden11" class="clicker" onclick="view('hidden11'); return false">Answer. Click me!</a>
           <div class="async__answer" id="hidden11" style="display: none;">
             <p class="async__text text">
-              Ответ: оба из представленных операторов, и rest (остаточные парамемтры), и spread (оператор расширения) обозначаются тремя точкам <code>...</code>. 
-              <br>
-              Rest operator используется, когда мы не знаем точно сколько будет параметров у функции. Тогда мы можем объявить функцию следующим образом: 
-              <br>
-              <code>function sum(a, b, c, ...args)</code> // rest operator <code>...</code> соберет оставшиеся пока неизвестные параметры в массив args для дальнейшего их использования. 
-              Rest operator всегда записывается на последнем месте в списке параметров функции.
+              Ответ: для того чтобы обработать ошибки мы можем "выборосить" исключение с помощью инструкции <code>throw</code>, создать объект <code>Error</code>. После 
+              этого выполнение скрипта остановится, либо нужно обработать ошибку. Очень удобно обрабатывать ошибки в конструкции <code>try...catch</code>. Блок <code>try</code> нужен для 
+              попытки выполнения кода, и если код содержит в себе ошибку, то эта ошибка выбрасывается в блок <code>catch</code>. Блок <code>catch</code> выполняет инструкции, необходимые для обработки ошибки. 
+              Получается, что блок <code>catch</code> может обработать только те ошибки, о которых знает. Те, ошибки о которых он не знает можно пробросить (с помощью <code>throw</code>) дальше, например, в следующие блоки <code>catch</code>. 
+              Также в этой конструкции есть третий блок - <code>finally</code>, необходимый для той части кода, которая должна быть выполнена несмотря на возникшие ошибки. 
             </p>
             <p class="async__text text">
-              Spread operator, хоть и записывается также через троеточие, но выполняет противоположную функцию. Он "расширяет", например, массив параметров в вызове функции. Spread operator
-              в принципе "расширяет" любой элемент, который можно перебрать (в дополнение к массивам - строки, объекты). Также, с помощью этого оператора можно соединить несколько массивов или 
-              представить строку в виде массива элементов.
+              Сейчас, с синтаксисом <code>async/await</code> мы можем использовать <code>try...catch</code> для обработки ошибок также, как если бы работали с синхронным кодом.
             </p>
           </div>
         </li>
@@ -292,7 +391,21 @@
           <a href="#hidden12" class="clicker" onclick="view('hidden12'); return false">Answer. Click me!</a>
           <div class="async__answer" id="hidden12" style="display: none;">
             <p class="async__text text">
-              Ответ: 
+              Ответ: честно говоря, сложный для меня вопрос т.к. пока не имею опыта работы ни на одном из фреймворков. Поэтому поделюсь своими мыслями по поводу трех наиболее популярных - <code>React</code>, <code>Vue</code> и <code>Angular</code>. 
+              Конечно же первостепенно привлекает <code>Vue</code> из-за его простоты и низкого порога входа. Из-за его простоты <code>Vue</code> получается очень удобным и лаконичным, пользуется популярностью у разработчиков. Но очень сильно отталкивает то, что
+              <code>Vue</code> не имеет поддержки крупных компаний. Есть риск, что команда разработчиков <code>Vue</code> перестанет поддерживать свой проект. Поэтому крупные приложения писать на <code>Vue</code> опасненько.
+            </p>
+            <p class="async__text text">
+              <code>React</code> - поддержка от Facebook, а соответственно и популярность у множества разработчиков позволяет активно развивать как сам проект, так и находить современные решения на практике при работе с данным фреймворком. Разрабатывая приложения на <code>React</code>
+              мы имеем доступ к низкоуровневому функционалу, что, несомненно, будет плюсом для профессионалов и минусом для новичков - высок риск запутаться в своем же коде.
+            </p>
+            <p class="async__text text">
+              <code>Angular</code> - поддержка от Google? что опять таки означает популярность у разработчиков и, следовательно, развитие фреймворка. Очень большой фреймворк с огромным функционалом, постоянная поддержка. Т.к. <code>Angular</code> использует <code>TypeScript</code> - 
+              это дает очень большое удобство в написании кода и удобный функционал. У <code>Angular</code> практически не надо никаких доп. инструментов - практически все есть в коробке. 
+            </p>
+            <p class="async__text text">
+              Что бы выбрал я? Конечно же зависит от поставленной задачи. Если приложение рационально писать на <code>Angular</code>, то значит его и надо выбирать, а знания лишними не будут. 
+              Абстрагируясь от поставленной задачи я бы выбрал <code>React</code>, посчитав его золотой серединой.
             </p>
           </div>
         </li>
@@ -304,6 +417,64 @@
               Ответ: 
             </p>
           </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="typescript">
+    <div class="container">
+      <h2 class="typescript__title title__h2">Block 3: TypeScript</h2>
+      <ul class="typescript__list text">
+        <li class="typescript__item">
+          <p class="typescript__question">1. Is it possible to check types in runtime? If so, how?</p>
+          <a href="hidden14" class="clicker" onclick="view('hidden14'); return false">Answer. Click me!</a>
+          <div class="typescript__answer" id="hidden14" style="display: none;">
+            <p class="typescript__text text">
+              Ответ: стандартными инструментами <code>JS</code> или <code>TS</code> проверить типы во время выполнения кода нельзя. Потому что, когда код компилируется из <code>TS</code> в 
+              <code>JS</code> - все типы и проверки исчезают в чистом <code>JS</code>. Типы и проверки присутствуют только на этапе разработки на <code>TS</code>. Но тем не менее есть возможность
+              валидации типов в рантайме с помощью сторонних библиотек. Одна из них, например, использует обертку, внутри которой будет необходиммая логика проверки типов. Эту обертку можно 
+              применять к проверяемой функции и, при несоответствии типов, ловить ошибку конструкцией <code>try...catch</code>.
+            </p>
+          </div>
+        </li>
+        <li class="typescript__item">
+          <p class="typescript__question">2. What is the difference between private and protected fields?</p>
+          <a href="#hidden15" class="clicker" onclick="view('hidden15'); return false">Answer. Click me!</a>
+          <div class="typescript__answer" id="hidden15" style="display: none;">
+            <p class="typescript__text text">
+              Ответ: модификатор <code>private</code> позволяет получить доступ к соответствующему свойству (или конструктору, методу) только внутри класса, где он был использован. 
+              Модификатор <code>protected</code> позволяет получить доступ к соответствующему свойству (или конструктору, методу) внутри своего класса и внутри классов-наследников. 
+            </p>
+          </div>
+        </li>
+        <li class="typescript__item">
+          <p class="typescript__question">3. How do interfaces help in development?</p>
+          <a href="#hidden16" class="clicker" onclick="view('hidden16'); return false">Answer. Click me!</a>
+          <div class="typescript__answer" id="hidden16" style="display: none;">
+            <p class="typescript__text text">
+              Ответ: интерфейсы в <code>TypeScript</code> нужны для того, чтобы описать форму объекта (с указанием типов соответствующих свойств или методов). Таким образом, мы можем указать тип
+              объекта, как интерфейс, и тогда будет происходить проверка на наличие соответствующих свойств и их типов. Можно реализовывать интерфейсы, например, в классах ( <code>implements</code> ). 
+              Это позволяет описать класс с учетом свойств и их типов, указанных в реализуемом интерфейсе. Классы поддерживают множественную реализацию интерфейсов. Интерфейсы могут наследоваться ( <code>extends</code> ) и могут наследоваться от нескольких 
+              интерфейсов в отличии от классов.
+            </p>
+          </div>
+        </li>
+        <li class="typescript__item">
+          <p class="typescript__question">4. How would you pass arguments into a Class?</p>
+          <a href="#hidden17" class="clicker" onclick="view('hidden17'); return false">Answer. Click me!</a>
+          <div class="typescript__answer" id="hidden17" style="display: none;">
+            <p class="typescript__text text">
+              Ответ: насколько я понял вопрос - сложность может заключаться в том, что мы можем не знать заранее какого типа будут аргументы, передаваемые в класс. Типом <code>any</code> в данном случае пользоваться неразумно,
+              потому что входной тип может быть преобразован внутри объекта, особенно, если передаваемый аргумент используется в каком-то методе. Тогда согласно синтаксису и входной и выходной тип будут валидны (потому что указан <code>any</code>), но 
+              фактически они могут различаться. Чтобы избежать этого используются дженерики (Generics). Они позволяют указывать некий "обобщенный" тип, который будет заменен на конкретный, переданный пользователем. Конструкция <code>&ltT&gt</code> перехватит на входе
+              тип аргумента и подменит им все <code>T</code>.
+            </p>
+          </div>
+        </li>
+        <li class="typescript__item">
+          <p class="typescript__question">5. Code task</p>
+          <a href="https://stackblitz.com/edit/js-zxsnnp?file=index.js" class="clicker" target="_blank">Answer and explanation. Click me!</a>
         </li>
       </ul>
     </div>
