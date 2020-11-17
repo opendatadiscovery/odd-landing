@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.typekit.net/dfy2vbt.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/utils/fullpage.css" />
     <title>Internship programm</title>
   </head>
 <body>
+
   <header class="header">
     <div class="wrapper">
       <div class="header__logo-cont">
@@ -21,6 +23,7 @@
       </div>
     </div>
   </header>
+
   <section class="welcome">
     <div class="content-wrapper">
       <h1 class="welcome__title">
@@ -480,11 +483,21 @@
     </div>
   </section>
 
+
+
+
 </body>
 
 <script>function view(n) {
   style = document.getElementById(n).style;
   style.display = (style.display == 'block') ? 'none' : 'block';
 }</script>
+
+<script>
+  var fullPageInstance = new fullpage('#myFullpage', {
+    navigation: true,
+    sectionsColor:['#ff5f45', '#0798ec', '#fc6c7c', 'grey']
+});
+</script>
 
 </html>
