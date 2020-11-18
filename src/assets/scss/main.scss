@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $mainFont;
-  font-size: $mainFontSize;
+  font-size: rem(16px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,6 +92,23 @@ section,
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
+
+  @media (max-width: $phoneWidth) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $desktopWidth;
+      @media screen and (max-width: $smDesktopWidth) {
+        max-width: $tableWidth;
+      }
+      @media screen and (max-width: $tableWidth) {
+        max-width: $phoneWidth;
+      }
+      @media screen and (max-width: $phoneWidth) {
+        max-width: $smPhoneWidth;
+      }
+  }
 }
 
 .content-wrapper {
@@ -189,7 +206,8 @@ pre {
   display: flex;
   flex-direction: column;
 
-  width: 60%;
+  width: 60vw;
+  
   white-space: pre-wrap;
   word-break: break-word;
   background: rgba(242, 242, 242, 1);
@@ -199,6 +217,7 @@ pre {
 .code__examples {
   flex: 1 1 auto;
   text-align: left;
+  padding: 0 3%;
 }
 
 

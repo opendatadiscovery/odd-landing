@@ -1,6 +1,9 @@
 .welcome {
 
-    
+    @media (max-width: $phoneWidth) {
+        height: calc(100vh - 175px);
+        @include flex-cc();
+    }
     
     &__title {
         display: inline-block;

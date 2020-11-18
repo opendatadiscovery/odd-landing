@@ -2,7 +2,8 @@
     width: 100%; 
     height: auto;
     background-color: $keycolor-dark;
-    border: 1px solid red;
+
+
 
     &__logo-cont {
         @include flex-cc();
@@ -10,12 +11,26 @@
         min-width: 150px;
         height: inherit;
         margin-left: 15%;
+        margin-right: 5%;
         padding: 0 20px;
         transform: skew(15deg);
             -webkit-transform: skew(15deg);
             -moz-transform: skew(15deg);
             -o-transform: skew(15deg);
         background-color: $keycolor;
+
+        @media (max-width: $phoneWidth) {
+            margin: 0;
+        }
+
+        @media (max-width: $smPhoneWidth) {
+            width: 100%;
+            margin: 0;
+            transform: skew(0deg);
+            -webkit-transform: skew(0deg);
+            -moz-transform: skew(0deg);
+            -o-transform: skew(0deg);
+        }
     }
 
     &__logo {
@@ -23,12 +38,20 @@
     }
 
     &__contacts {
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
         padding: 10px 0;
         margin: 0 15% 0 0;
+
+        @media (max-width: $phoneWidth) {
+            align-items: center;
+            margin: 0;
+        }
+
+        
     }
 
     &__contact {
@@ -36,5 +59,9 @@
         font-family: 'Lato', sans-serif;
         font-size: rem(22px);
         color: $keycolor;
+
+        @media (max-width: $phoneWidth) {
+            font-size: rem(18px);
+        }
     }
 }
