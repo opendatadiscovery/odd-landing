@@ -3,7 +3,6 @@
 
 
 // flexbox column center
-
 @mixin flex-cc() {
   display: flex;
   flex-direction: column;
@@ -12,10 +11,32 @@
 }
 
 // flexbox row space-between
-
 @mixin flex-rsb() {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+// flexbox row center
+@mixin flex-rc() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// hover for buttons
+@mixin button-hover() {
+  &:hover {
+    background-color: $background-secondary;
+    color: $text-light;
+  }
+}
+
+@mixin button-hover-reverse() {
+  &:hover {
+    color: $text-secondary !important;
+    background-color: $background-primary !important;
+  }
 }
 
 // px to rem

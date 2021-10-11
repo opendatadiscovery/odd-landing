@@ -1,8 +1,5 @@
-/* Fonts:
-  https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
-  ========================================================================== */
-
 @import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 // Base Montserrat:
 // @include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Thin", 100);
@@ -74,7 +71,16 @@
        url('../fonts/LatoLatin/LatoLatin-Black.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
-  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Poppins */
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url('../fonts/LatoLatin/LatoLatin-Black.woff2') format('woff2'), /* Modern Browsers */
+  url('../fonts/LatoLatin/LatoLatin-Black.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/LatoLatin/LatoLatin-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
 }
 
 // /* Webfont: LatoLatin-BlackItalic */

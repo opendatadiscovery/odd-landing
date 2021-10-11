@@ -1,29 +1,45 @@
 .welcome {
+    margin-top: 70px;
+    width: 620px;
 
-    @media (max-width: $phoneWidth) {
-        height: calc(100vh - 175px);
-        @include flex-cc();
+    &__status {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: rem(18px);
+        line-height: rem(27px);
+        color: $text-grey;
     }
-    
+
     &__title {
-        display: inline-block;
-        margin: 0 auto;
-        font-size: rem(72px);
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: rem(64px);
+        line-height: rem(64px);
+        color: $text-primary;
         text-align: center;
-        line-height: rem(72px);
     }
 
     &__description {
-        display: inline-block;
-        margin-top: 30px;
-        font-size: rem(48px);
-        text-align: center;
+        margin-top: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: rem(20px);
+        line-height: rem(30px);
+        color: $text-grey;
+    }
 
-        &-author {
-            display: inline-block;
-            font-size: rem(36px);
-            text-align: center;
-            font-style: italic;
+    &__buttons {
+        margin-top: 50px;
+
+        &_deploy {
+            color: $text-light !important;
+            background-color: $background-secondary !important;
+            @include button-hover-reverse();
+        }
+
+        &_schedule {
+            @include button-hover();
         }
     }
 }

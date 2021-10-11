@@ -6,7 +6,7 @@ $mainFont                : 'Lato', Helvetica, Arial, sans-serif;
 
 
 // Size
-$mainFontColor           : #ffffff;
+$mainFontColor           : #000000;
 $mainFontSize            : 16px;
 $mainFontWeight          : 300;
 $mainLineHeight          : 1.55;
@@ -23,11 +23,26 @@ $iconWidth               : 40px;
 $smDesktopIconWidth      : 35px;
 
 
+// Border Color
+$border-base             : #6A6DEE;
+$border-dark             : #000000;
+
+// Text Colors
+$text-primary            : #000000;
+$text-secondary          : #6A6DEE;
+$text-grey               : #727290;
+$text-light              : #ffffff;
+
+// Background colors
+$background-primary      : #ffffff;
+$background-secondary    : #6A6DEE;
 
 
-/*
-  All colors taken from:
-*/
+
+
+
+
+// old colors
 
 // Main color
 $default-color           : #ffffff;
@@ -44,14 +59,7 @@ $neutral-regular         : #606266;
 $neutral-secondary       : #909399;
 $neutral-placeholder     : #C0C4CC;
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
-
 // project colors
-
 $keycolor               : #2fcc71;
 $keycolor-light         : #4d3fff;
 $keycolor-lighten       : #3f69ff;

@@ -5,10 +5,8 @@
   const MiniCssExtractPlugin = require('mini-css-extract-plugin')
   const CopyWebpackPlugin = require('copy-webpack-plugin')
   const HtmlWebpackPlugin = require('html-webpack-plugin')
-  const { VueLoaderPlugin } = require('vue-loader')
   const ImageMinPlugin = require('imagemin-webpack-plugin').default
   const imageminMozjpeg = require('imagemin-mozjpeg')
-  const $ = require('jquery')
   const webpack = require('webpack')
   const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -35,7 +33,6 @@
     },
     entry: {
       app: ['babel-polyfill', PATHS.src]
-      // module: `${PATHS.src}/your-module.js`,
     },
     output: {
       filename: `${PATHS.assets}js/[name].[contenthash].js`,
@@ -67,16 +64,6 @@
           exclude: '/node_modules/'
         },
         {
-          // Vue
-          test: /\.vue$/,
-          loader: 'vue-loader',
-          options: {
-            loader: {
-              scss: 'vue-style-loader!css-loader!sass-loader'
-            }
-          }
-        },
-        {
           // Fonts
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
           loader: 'file-loader',
@@ -92,46 +79,6 @@
             outputPath: '../../',
           },
           
-          /* test: /\.(gif|png|jpe?g|svg)$/i,
-          use: */ /* {
-          loader: 'file-loader',
-          options: {
-            name: '[path][name]-[hash].[ext]',
-            outputPath: '../',
-            publicPath: '/',
-          }, */
-          /* [
-            'file-loader', */
-            /* options: {
-              name: '[path][name]-[hash].[ext]',
-              outputPath: '../',
-              publicPath: '/',
-            }, */
-            /* {
-              loader: 'image-webpack-loader',
-              options: {
-                mozjpeg: {
-                  progressive: true,
-                  quality: 65
-                },
-                // optipng.enabled: false will disable optipng
-                optipng: {
-                  enabled: false,
-                },
-                pngquant: {
-                  quality: [0.65, 0.80],
-                  speed: 4
-                },
-                gifsicle: {
-                  interlaced: false,
-                },
-                // the webp option will enable WEBP
-                webp: {
-                  quality: 65
-                }
-              }
-            },
-          ], */
         },
         {
           // scss
@@ -150,10 +97,6 @@
                 config: { path: `./postcss.config.js` }
               }
             },
-            /* {
-              loader: 'resolve-url-loader',
-              options: {}
-            }, */
             {
               loader: 'sass-loader',
               options: { sourceMap: true }
@@ -185,13 +128,10 @@
       alias: {
         '~': PATHS.src, // Example: import Dog from "~/assets/img/dog.jpg"
         '@': `${PATHS.src}/js`, // Example: import Sort from "@/utils/sort.js"
-        vue$: 'vue/dist/vue.js',
         images: path.resolve(__dirname, 'src/assets/img/')
       }
     },
     plugins: [
-      // Vue loader
-      new VueLoaderPlugin(),
       new MiniCssExtractPlugin({
         filename: `${PATHS.assets}css/[name].[contenthash].css`
       }),
@@ -214,33 +154,7 @@
           }
         ]
       }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      }),
       new CleanWebpackPlugin(),
-      /* new ImageminPlugin({
-        pngquant: {
-          quality: '65-90',
-          speed: 4
-        },
-        gifsicle: {
-          optimizationLevel: 7,
-          interlaced: false
-        },
-        optipng: {
-          optimizationLevel: 7,
-          interlaced: false
-        },
-        plugins: [
-          imageminMozjpeg({
-            progressive: true,
-            quality: 65
-          })
-        ]
-      }), */
-  
       /*
         Automatic creation any html pages (Don't forget to RERUN dev server!)
         See more:
