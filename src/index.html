@@ -63,7 +63,7 @@
       </div>
     </section>
 
-    <section class="container aboutODD">
+    <section class="container aboutODD" id="aboutODD">
       <div class="column-wrapper">
         <h2 class="title__h2">What is ODD Platform? </h2>
         <p class="aboutODD__description text__description">
@@ -80,7 +80,7 @@
         <h2 class="title__h2">Data Doesn’t Have to Break</h2>
         <div class="aboutData__item">
           <img src="./assets/img/feature_1.png" class="aboutData__item-image" alt="data image">
-          <div class="aboutData__item-description column-wrapper">
+          <div id="federated" class="aboutData__item-description column-wrapper">
             <h5 class="aboutData__feature title__h5">
               FEDERATED  DATA CATALOG
             </h5>
@@ -107,7 +107,7 @@
         </div>
         <div class="aboutData__item aboutData__item_reverse">
           <img src="./assets/img/feature_2.png" class="aboutData__item-image" alt="data image">
-          <div class="aboutData__item-description column-wrapper">
+          <div id="ingestion" class="aboutData__item-description column-wrapper">
             <h5 class="aboutData__feature title__h5">
               INGESTION-TO-PRODUCT LINEAGE
             </h5>
@@ -133,7 +133,7 @@
         </div>
         <div class="aboutData__item">
           <img src="./assets/img/feature_3.png" class="aboutData__item-image" alt="data image">
-          <div class="aboutData__item-description column-wrapper">
+          <div id="quality" class="aboutData__item-description column-wrapper">
             <h5 class="aboutData__feature title__h5">
               INTEGRATED DATA QUALITY ASSURANCE
             </h5>
@@ -187,7 +187,7 @@
         </div>
         <div class="aboutData__item">
           <img src="./assets/img/feature_5.png" class="aboutData__item-image" alt="data image">
-          <div class="aboutData__item-description column-wrapper">
+          <div id="collaboration" class="aboutData__item-description column-wrapper">
             <h5 class="aboutData__feature title__h5">
               SEAMLESS COLLABORATION
             </h5>
@@ -432,6 +432,64 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer__logo-cont">
+        <img src="./assets/img/logo_footer.png" class="footer__logo" alt="ODD logo">
+        <a target="_blank" href="" >
+          <button class="button footer__shedule-button">
+            Schedule a call
+          </button>
+        </a>
+      </div>
+      <div class="footer__item-cont">
+        <div class="footer__cont-title">
+          Product
+        </div>
+        <a href="#aboutODD" class="footer__link">What is ODD Platform?</a>
+        <a href="#federated" class="footer__link">Federated Data Catalog</a>
+        <a href="#ingestion" class="footer__link">Ingestion-to-product lineage</a>
+        <a href="#quality" class="footer__link">Integrated Data quality assurance</a>
+        <a href="#collaboration" class="footer__link">Seamless collaboration</a>
+      </div>
+      <div class="footer__item-cont">
+        <div class="footer__cont-title">
+          Press
+        </div>
+        <a target="_blank" href="https://towardsdatascience.com/the-missing-piece-of-data-discovery-and-observability-platforms-open-standard-for-metadata-37dac2d0503" class="footer__link">
+          The Missing Piece of Data Discovery and Observability Platforms: Open Standard for Metadata
+        </a>
+        <a href="" class="footer__link">
+          Open Data Discovery Specification: A Universal Standard for Metadata Collection
+        </a>
+        <a target="_blank" href="https://thesequence.substack.com/p/osin" class="footer__link">
+          Interview With German Osin: About Data Discovery and Observability in ML Solutions
+        </a>
+        <a href="" class="footer__link">
+          Provectus Releases Open Data Discovery Platform To Democratize  Data Observability
+        </a>
+        <a href="https://towardsdatascience.com/feature-store-as-a-foundation-for-machine-learning-d010fc6eb2f3" target="_blank" class="footer__link">
+          Feature Store as a Foundation of Machine Learning
+        </a>
+      </div>
+      <div class="footer__item-cont">
+        <div class="footer__cont-title">
+          Newsletter
+        </div>
+        <div class="footer__subscribe"></div>
+        <div class="footer__social-cont">
+          <a target="_blank" href="https://github.com/opendatadiscovery/odd-platform">
+            <img src="./assets/img/github.png" class="footer__social-logo" alt="logo github">
+          </a>
+          <a target="_blank" href="">
+            <img src="./assets/img/twitter.png" class="footer__social-logo" alt="logo twitter">
+          </a>
+          <a target="_blank" href="https://join.slack.com/t/opendatadiscovery/shared_invite/zt-vzcxeu3p-01Iyevf63btjv8nUiwYwRw">
+            <img src="./assets/img/slack.png" class="footer__social-logo" alt="logo slack">
+          </a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>

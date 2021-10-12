@@ -1,0 +1,71 @@
+.footer {
+  padding: 80px 120px;
+  background-color: #010E43;
+  @include flex-rsb();
+  align-items: flex-start;
+
+  &__item-cont {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 100%;
+  }
+
+  &__cont-title {
+    padding-bottom: 22px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &__logo-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    width: 255px;
+  }
+
+  &__link {
+    margin-top: 40px;
+    font-family: 'lato', sans-serif;
+    font-size: 15px;
+    color: $text-light;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__cont-title {
+    font-family: 'lato', sans-serif;
+    font-size: 16px;
+    color: $text-light;
+  }
+
+  &__shedule-button {
+    border: 1px solid #ffffff !important;
+    padding: 26px 92px !important;
+    margin: 84px 0 0 0 !important;
+    color: #ffffff !important;
+    &:hover {
+      background-color: #ffffff;
+      color: #010E43 !important;
+      border-color: #010E43;
+    }
+  }
+
+  &__social-cont {
+    margin-top: 50px;
+  }
+
+  &__social-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    color: $background-gray;
+  }
+
+  &__subscribe {
+    height: 220px;
+  }
+}

@@ -3,7 +3,6 @@
 @import 'utils/reset';
 @import "utils/fonts";
 
-
 /* site styles */
 @import 'elements/1_header.scss';
 @import 'elements/2_welcome.scss';
@@ -15,8 +14,8 @@
 @import 'elements/8_efforts';
 @import 'elements/9_community';
 @import 'elements/10_getStarted';
+@import 'elements/11_footer';
 /* end site styles */
-
 
 html {
   line-height: $mainLineHeight;
@@ -35,7 +34,7 @@ html {
 }
 
 body {
-  background-color: $default-color;
+  background-color: $background-primary;
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
@@ -71,102 +70,6 @@ li {
   padding: 0;
   list-style-type: none;
 }
-
-section,
-.section {
-  overflow: hidden;
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $smDesktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $tableWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    padding: 20px 0;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-
-  @media (max-width: $phoneWidth) {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 100%;
-    max-width: $desktopWidth;
-      @media screen and (max-width: $smDesktopWidth) {
-        max-width: $tableWidth;
-      }
-      @media screen and (max-width: $tableWidth) {
-        max-width: $phoneWidth;
-      }
-      @media screen and (max-width: $phoneWidth) {
-        max-width: $smPhoneWidth;
-      }
-  }
-}
-
-.text {
-  //font-family: 'lato', sans-serif;
-  color:$keycolor-dark;
-  font-weight: $mainFontWeight;
-  font-size: rem(18px);
-  font-style: normal;
-  margin-top: rem(5px);
-
-    &_bold {
-      font-weight: 700;
-    }
-}
-
-.text_italic {
-  font-style: italic;
-  margin-left: rem(20px);
-}
-
-.text_indent {
-  text-indent: rem(20px);
-  text-align: justify;
-}
-
-.clicker {
-  margin-top: rem(5px);
-  padding-left: rem(20px);
-  color: $keycolor-dark;
-  font-weight: 600;
-}
-
-code {
-  color: $keycolor-lighten;
-}
-
-pre {
-  display: flex;
-  flex-direction: column;
-
-  width: 60vw;
-  
-  white-space: pre-wrap;
-  word-break: break-word;
-  background: rgba(242, 242, 242, 1);
-  border-radius: 15px;
-}
-
-.code__examples {
-  flex: 1 1 auto;
-  text-align: left;
-  padding: 0 3%;
-}
-
-// new classes
 
 .column-wrapper {
   display: flex;
