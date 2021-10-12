@@ -1,5 +1,3 @@
-/* Base config:
-  ========================================================================== */
   const path = require('path')
   const fs = require('fs')
   const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -7,7 +5,6 @@
   const HtmlWebpackPlugin = require('html-webpack-plugin')
   const ImageMinPlugin = require('imagemin-webpack-plugin').default
   const imageminMozjpeg = require('imagemin-mozjpeg')
-  const webpack = require('webpack')
   const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
   const { CleanWebpackPlugin } = require('clean-webpack-plugin')
   const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -16,12 +13,10 @@
   // Main const
   const PATHS = {
     src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist'),
+    docs: path.join(__dirname, '../docs'),
     assets: 'assets/'
   }
   
-  // Pages const for HtmlWebpackPlugin
-  // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
   const PAGES_DIR = PATHS.src
   const PAGES = fs
     .readdirSync(PAGES_DIR)
@@ -37,10 +32,6 @@
     output: {
       filename: `${PATHS.assets}js/[name].[contenthash].js`,
       path: PATHS.dist,
-      /*
-        publicPath: '/' - relative path for dist folder (js,css etc)
-        publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
-      */
       publicPath: ''
     },
     optimization: {
@@ -58,19 +49,10 @@
     module: {
       rules: [
         {
-          // JavaScript
           test: /\.js$/,
           loader: 'babel-loader',
           exclude: '/node_modules/'
         },
-        // {
-        //   // Fonts
-        //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        //   loader: 'file-loader',
-        //   options: {
-        //     name: '[name].[ext]'
-        //   }
-        // },
         {
           test: /\.(gif|png|jpg|jpeg|svg)?$/,
           loader: 'file-loader',
@@ -81,7 +63,6 @@
           
         },
         {
-          // scss
           test: /\.scss$/,
           use: [
             'style-loader',
@@ -104,7 +85,6 @@
           ]
         },
         {
-          // css
           test: /\.css$/,
           use: [
             'style-loader',
@@ -126,8 +106,8 @@
     },
     resolve: {
       alias: {
-        '~': PATHS.src, // Example: import Dog from "~/assets/img/dog.jpg"
-        '@': `${PATHS.src}/js`, // Example: import Sort from "@/utils/sort.js"
+        '~': PATHS.src,
+        '@': `${PATHS.src}/js`,
         images: path.resolve(__dirname, 'src/assets/img/')
       }
     },
@@ -137,17 +117,10 @@
       }),
       new CopyWebpackPlugin({
         patterns: [
-          // Images:
           {
             from: `${PATHS.src}/${PATHS.assets}img`,
             to: `${PATHS.assets}img`
           },
-          // // Fonts:
-          // {
-          //   from: `${PATHS.src}/${PATHS.assets}fonts`,
-          //   to: `${PATHS.assets}fonts`
-          // },
-          // Static (copy to '/'):
           {
             from: `${PATHS.src}/static`,
             to: ''
@@ -155,13 +128,6 @@
         ]
       }),
       new CleanWebpackPlugin(),
-      /*
-        Automatic creation any html pages (Don't forget to RERUN dev server!)
-        See more:
-        https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
-        Best way to create pages:
-        https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
-      */
       ...PAGES.map(
         page =>
           new HtmlWebpackPlugin({
