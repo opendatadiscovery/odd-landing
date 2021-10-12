@@ -1,0 +1,41 @@
+.observe {
+  background-color: $background-light;
+  padding: 120px 0;
+
+  &__feature {
+    &-title { margin-top: 10px }
+  }
+
+  &__cards {
+    margin-top: 60px;
+    @include flex-rsb();
+  }
+
+  &__card {
+    background-color: $background-primary;
+    box-shadow: 0 15px 32px rgba(46, 79, 255, 0.1);
+    border-radius: 5px;
+    margin-right: 25px;
+    width: 390px;
+    padding: 50px;
+
+    &:last-child {margin-right: 0}
+
+    &-advantageCont {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin-top: 15px;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 25px;
+    }
+
+    &-advantage {
+
+    }
+  }
+}

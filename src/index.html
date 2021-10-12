@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Open Data Discovery</title>
   </head>
 <body>
@@ -36,8 +35,8 @@
     </div>
   </header>
 
-  <section class="container">
-    <div class="column-wrapper welcome">
+  <section class="container welcome">
+    <div class="column-wrapper">
       <p class="welcome__status">
         FREE & OPEN-SOURCE
       </p>
@@ -45,7 +44,7 @@
         Trust Your Data
         Across the Board
       </h1>
-      <p class="welcome__description">
+      <p class="welcome__description text__description">
         First Open-Source Data Discovery and Observability Platform.
       </p>
       <div class="welcome__buttons">
@@ -62,457 +61,216 @@
       </div>
     </div>
   </section>
-  <section class="common">
-    <div class="container">
-      <h2 class="common__title title__h2">Block 1: Common</h2>
-      <ul class="common__list text">
-        <li class="common__item">
-          <p class="common__question">1. What are primitives? How can developers use them?</p>
-          <a href="hidden1" class="clicker" onclick="view('hidden1'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden1" style="display: none;">
-            <p class="common__text text">
-              Ответ: примитивы - это данные, но не объекты и не имеют методов.
-            </p>
-            <ul class="common__text-list text">Например, примитивами являются типы данных:
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  1. Строки.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: изменить созданную строку нельзя, можно создать новую строку полностью (или частично) копирую старую. Можем складывать строки (конкатенация).
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  2. Числа.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: можем применять математические операции ( например, [+, -, *, /] ).
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  3. Логические значения.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: хранение логических значений да/нет (true/false).
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  4. null.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: единственное в своем типе значение, которое ничего из себя не представляет ( по смыслу: null === ничего ).
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  5. undefined.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: единственное в своем типе значение, которое значит, что значение не было присвоено, например, переменной.
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  6. Оооочень большие числа (BigInt).
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: математические операции с очень большими числами, например для точных вычислений.
-                </p>
-              </li>
-              <li class="common__text-item">
-                <p class="common__text text text_bold">
-                  7. Символы.
-                </p>
-                <p class="common__text text text_italic">
-                  Использование: с помощью символов мы можем создавать уникальные идентификаторы. Например, для создания уникальных свойств объекта.
-                </p>
-              </li>
-            </ul>
-            <div class="common__answer">
-              <p class="common__text text text_indent">
-                Мы можем присваивать переменной различные примитивные значения, но сами примитивы мы не можем изменять.
-                Очень мучался над вопросом: "Ведь к примитивам тоже применяются методы, например <code>'str'.toUpperCase();</code>? Как так?"
-                После долгих чтений литературы и раздумий пришел вот к какому выводу и, надеюсь, он верный.
-              </p>
-              <p class="common__text text text_indent">
-                Объясню на примере:
-                <br>
-                <code>let str = 'string';</code> // присваиваем переменной примитивное строковое значение
-                <br>
-                <code>str.toUpperCase();</code> // "как-бы" применяем метод к переменной, содержащей строковое значение. На самом деле интерпретатор <b>временно</b> и самостоятельно преобразует примитив в объект, а уже у объекта ( в данном случае <code>String()</code> ) мы можем использовать методы ( в данном случае <code>.toUpperCase()</code> ).
-                <br>
-                <code>console.log( str.toUpperCase() )</code> // в консоли отобразится результат вызова метода - <code>'STRING'</code>
-                <br>
-                <code>console.log( str )</code> // в консоли отобразится - <code>'string'</code>. Таким образом подтверждаем, что исходный примитив мы не можем изменить т.к. не изменилось значение переменной <code>str</code>. А результат "применения" метода к примитиву ( <code>str.toUpperCase()</code> ) существует только пока существует функция-обертка, фактически преобразующая примитив в объект, чтобы было возможно приметь методы.
-              </p>
-          </div>
-          </div>
-        </li>
-        <li class="common__item">
-          <p class="common__question">2. What does keyword `this` mean?</p>
-          <a href="#hidden2" class="clicker" onclick="view('hidden2'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden2" style="display: none;">
-            <p class="common__text text">
-              Ответ: <code>this</code> - это ссылка на объект, в контексте которого используется это ключевое слово.
-              Если в объекте есть вложенные объекты, то <code>this</code> будет ссылаться на ближайший к нему родительский объект.
-              Мы можем устанавливать (менять) контекст окружения <code>this</code>, например, с помощью методов <code>call()</code>, <code>apply()</code> или <code>bind()</code>.
-              <code>this</code> позволяет масштабировать приложение и избегать дублирование кода, например, при использовании <code>this</code> в функциях-конструкторах и далее при создании однотипных объектов на основе этого конструктора.
-            </p>
-          </div>
-        </li>
-        <li class="common__item">
-          <p class="common__question">3. How would you explain what callback is?</p>
-          <a href="#hidden3" class="clicker" onclick="view('hidden3'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden3" style="display: none;">
-            <p class="common__text text">
-              Ответ: callback-функция - это функция, которая будет выполнена после завершения работы другой функции. 
-              В исходную функцию (для выполнения которой необходимо какое-то время, например, запрос данных на стороннем сервере) одним из аргументов 
-              передается callback-функция, которая будет вызвана по завершению действия исходной функции. Таким образом мы можем не переживать, что 
-              callback-функция останется без необходимых данных (которым нужно время, чтобы прийти с сервера), а начнет свое выполнение после выполнения исходной функции.
-            </p>
-          </div>
-        </li>
-        <li class="common__item">
-          <p class="common__question">4. What is function declaration and how do its types differ?</p>
-          <a href="#hidden4" class="clicker" onclick="view('hidden4'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden4" style="display: none;">
-            <p class="common__text text">
-              Ответ: функция, объявленная как Function Declaration доступна для выполнения из любой части скрипта. Потому что интерпретатор сначала пробегается по всему коду
-              в поисках Function Declaration и создает эти функции. Например:
-              <br>
-              <code>
-                test(); //выведет 'I can work from any place!'
-                <br>
-                <br>
-                function test() {
-                  <br>
-                <div style="margin-left: 20px;">alert('I can work from any place!');</div> 
-                }
-              </code>
-              Function Declaration будет иметь область видимости, ограниченную скобками <code>{ ... }</code>, если объявлена внутри них и используется <code>'strict mode'</code>.
-            </p>
-            <p class="common__text text">
-              Также мы можем объявить функцию, как Function Expression, например:
-              <br>
-              <code>
-                test(); // ошибка test is not defined
-                <br>
-                <br>
-                let test = function() {
-                  <br>
-                <div style="margin-left: 20px;">alert('I can't work from any place...');</div> 
-                };
-              </code>
-              <br>
-              Но при таком объявлении функции интерпретатор создаст ее только когда дойдет до правой части выражения <code>let test = ...</code>,
-              а это значит, что обращаться к данной функции мы можем только в коде ниже ее объявления. 
-              <br>
-              Также можно объявить анонимную функцию (без имени), например, такие функции применяются в виде callback-функций (вопрос №3).
-              Еще есть самовызывающиеся аноонимные функции, но на практике сам пока не встречал их применения. Чаще пользуюсь Function Declaration.
 
-            </p>
-          </div>
-        </li>
-        <li class="common__item">
-          <p class="common__question">5. Compare spread and rest operators.</p>
-          <a href="#hidden5" class="clicker" onclick="view('hidden5'); return false">Answer. Click me!</a>
-          <div class="common__answer" id="hidden5" style="display: none;">
-            <p class="common__text text">
-              Ответ: оба из представленных операторов, и rest (остаточные парамемтры), и spread (оператор расширения) обозначаются тремя точкам <code>...</code>. 
-              <br>
-              Rest operator используется, когда мы не знаем точно сколько будет параметров у функции. Тогда мы можем объявить функцию следующим образом: 
-              <br>
-              <code>function sum(a, b, c, ...args)</code> // rest operator <code>...</code> соберет оставшиеся пока неизвестные параметры в массив args для дальнейшего их использования. 
-              Rest operator всегда записывается на последнем месте в списке параметров функции.
-            </p>
-            <p class="common__text text">
-              Spread operator, хоть и записывается также через троеточие, но выполняет противоположную функцию. Он "расширяет", например, массив параметров в вызове функции. Spread operator
-              в принципе "расширяет" любой элемент, который можно перебрать (в дополнение к массивам - строки, объекты). Также, с помощью этого оператора можно соединить несколько массивов или 
-              представить строку в виде массива элементов.
-            </p>
-          </div>
-        </li>
-        <li class="common__item">
-          <p class="common__question">6. Code task</p>
-          <a href="https://stackblitz.com/edit/js-zxsnnp?file=index.js" class="clicker" target="_blank">Task solution. Click me!</a>
-        </li>
-      </ul>
+  <section class="container aboutODD">
+    <div class="column-wrapper">
+      <h2 class="title__h2">What is ODD Platform? </h2>
+      <p class="aboutODD__description text__description">
+        ODD Platform is the first tool to provide truly end-to-end data discovery, observability and trust
+        from ingestion to production. Based on ODD Spec for metadata collection, it removes barriers
+        and lets you add any tools to your stack.
+      </p>
+      <img class="aboutODD__ODDImage" src="/assets/img/aboutODD.png" alt="about ODD">
     </div>
   </section>
 
-  <section class="async">
-    <div class="container align_right">
-      <h2 class="async__title title__h2">Block 2: Async</h2>
-      <ul class="async__list text">
-        <li class="async__item">
-          <p class="async__question">1. JavaScript, is it synchronous or not?</p>
-          <a href="hidden7" class="clicker" onclick="view('hidden7'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden7" style="display: none;">
-            <p class="async__text text">
-              Ответ: в языке JavaScript присутствуют как синхронные операции (операции, которые выполняются в процессе выполнения кода), так и асинхронные. 
-              JavaScript - однопоточный язык, т.е. он выполняет строки кода одну за другой (другими словами функции обрабатываются только одним стеком вызовов). Но если, например, из двух строк кода первой необходимо время для выполнения (запрос на сервер/загрузка данных и т.д.),
-              то она будет запущена в фоновом режиме и интерпретатор перейдет к выполнению второй строчки кода (даже если выполнение второй строки требует результата выполнения первой). Вот такие операции называются асинхронными. 
-              Интерпретатор может выполнять асинхронные действия благодаря циклу событий (EventLoop). Все асинхронные операции так или иначе связаны с "внешним" миром, в первую очередь - взаимодействие с браузером. 
-              Таким образом, делаем вывод, что JavaScript в первую очередь однопоточный (синхронный) язык, а асинхронное поведение - это то, как может вести себя JavaScript при взаимодействии с "внешним" миром.
-            </p>
+  <section class="container aboutData">
+    <div class="column-wrapper">
+      <h2 class="title__h2">Data Doesn’t Have to Break</h2>
+      <div class="aboutData__item">
+        <img src="/assets/img/feature_1.png" class="aboutData__item-image" alt="data image">
+        <div class="aboutData__item-description column-wrapper">
+          <h4 class="aboutData__feature title__h5">
+            FEDERATED  DATA CATALOG
+          </h4>
+          <h3 class="aboutData__feature-title title__h3">
+            Plug In Any Data Sources
+            And Draw Insights
+          </h3>
+          <p class="aboutData__feature-desc text__feature">
+            Save hours on finding and understanding data. ODD offers truly end-to-end data discovery, lineage, and collaboration on data products. Based on an open standard for collecting metadata, it allows to bring in an unlimited variety of tools, data catalogs and feature stores.
+          </p>
+          <div class="aboutData__feature-buttons">
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Explore Demo
+              </button>
+            </a>
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Schedule Demo
+              </button>
+            </a>
           </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">2. What is the key principle of Call Stack?</p>
-          <a href="#hidden8" class="clicker" onclick="view('hidden8'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden8" style="display: none;">
-            <p class="async__text text">
-              Ответ: Call Stack (стек вызовов) - это структура данных, куда попадают вызываемые функции. Как раз Call Stack обеспечивает однопоточное выполнение JavaScript-кода.
-              Стек вызовов формируется "снизу-вверх". После выполнения функции она выкидывается из стека. Если у вызываемой функции (назовем ее <code>outer</code>) есть вложенные функция (назовем ее <code>inner</code>), то вложенная функция оказывается
-              на верхушке стека. После выполнения <code>inner</code> выбрасывается из стека и мы возвращаемся к функции, находящейся в стеке ниже (т.е. к <code>outer</code>) тем самым завершая ее выполнение. 
-            </p>
-            <p class="async__text text">
-              С асинхронными функциями стек вызовов работает немного иначе. Мы выяснили, что асинхронность проявляется при взаимодействии с "внешним" миром. Таким образом, если в Call Stack попадает асинхронная функция, то ее "фоновое выполнение"
-              переносится в соответствующую среду (например, API браузера или какой-то сервер) и асинхронная функция выкидывается из стека. После выполнения асинхронной функции во "внешнем" мире callback-функция перемещается из среды выполнения в очередь задач (Task queue) и 
-              далее цикл событий (EventLoop) следит за тем, чтобы стек был пустым. После чего внешняя среда может переместить callback из очереди задач в пустой стек вызовов для выполнения callback-функции. На этом завершается выполнение асинхронного кода.
-            </p>
+        </div>
+      </div>
+      <div class="aboutData__item aboutData__item_reverse">
+        <img src="/assets/img/feature_2.png" class="aboutData__item-image" alt="data image">
+        <div class="aboutData__item-description column-wrapper">
+          <h4 class="aboutData__feature title__h5">
+            INGESTION-TO-PRODUCT LINEAGE
+          </h4>
+          <h3 class="aboutData__feature-title title__h3">
+            Find Issues In Seconds And See Who Got Affected
+          </h3>
+          <p class="aboutData__feature-desc text__feature">
+            Forget unnerved stakeholders and wasting too much time on digging the root cause of data issues when it fails.  With ODD’s automatic company-wide ingestion-to-product lineage you’ll have answers in just seconds and stakeholders won’t need to wait.
+          </p>
+          <div class="aboutData__feature-buttons">
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Explore Demo
+              </button>
+            </a>
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Schedule Demo
+              </button>
+            </a>
           </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">3. What does AJAX mean?</p>
-          <a href="#hidden9" class="clicker" onclick="view('hidden9'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden9" style="display: none;">
-            <p class="async__text text">
-              Ответ: AJAX (Асинхронный JavaScript и XML) - это набор технологий (HTML, CSS, JS, DOM, XML, XMLHttpRequest), которые вместе позволяют отправлять/получать запросы на/с сервера в фоновом режиме (т.е. без перезагрузки страницы). 
-              Браузер отображает действующую веб-страницу, выполняет JavaScript код и содержит объект XMLHttpRequest. Далее JavaScript инициирует коммуникацию с сервером и отправляет AJAX запрос. Сервер принимает запрос, обрабатывает его и возвращает информацию. 
-              JavaScript обрабатывает ответ от сервера и добавляет новые данные на страницу (при необходимости) без обновления страницы. 
-            </p>
+        </div>
+      </div>
+      <div class="aboutData__item">
+        <img src="/assets/img/feature_3.png" class="aboutData__item-image" alt="data image">
+        <div class="aboutData__item-description column-wrapper">
+          <h4 class="aboutData__feature title__h5">
+            INTEGRATED DATA QUALITY ASSURANCE
+          </h4>
+          <h3 class="aboutData__feature-title title__h3">
+            Add Any Data Quality Tool
+            To Keep Your Data In Check
+          </h3>
+          <p class="aboutData__feature-desc text__feature">
+            Sleep well, knowing all your data is in check. Forget manual testing, days of debugging, and weeks of worrying. Know the impact of each code change with automatic testing. Enjoy lineage and alerts powered with data quality information.
+          </p>
+          <div class="aboutData__feature-buttons">
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Explore Demo
+              </button>
+            </a>
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Schedule Demo
+              </button>
+            </a>
           </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">4. Promise hell. How would you solve it?</p>
-          <a href="#hidden10" class="clicker" onclick="view('hidden10'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden10" style="display: none;">
-            <p class="async__text text">
-              Ответ: если у нас присутствует вложенность промисов, зависящих друг от друга напрямую, как в примере ниже, то <br>
-            </p>
-<pre>
-  <span class="code__examples">
-    onloadData()
-      .then((dataItem) => {                  
-        return formatedData(dataItem)                  
-          .then((clientData) => {                  
-            return print(clientData);                  
-          });                  
-        });
-  </span>
-</pre>
-            <p class="async__text text">
-              мы можем упростить код за счет избежания вложенности, т.к. метод <code>.data()</code> возвращает промис и синтаксис стрелочных функций позволяет не писать <code>return</code>,
-              если в функции один параметр. Результат ниже:
-            </p>
-<pre>
-  <span class="code__examples">
-    onloadData()
-      .then( dataItem => formatedData(dataItem) )                 
-      .then( clientData => print(clientData) );              
-  </span>
-</pre>
-            <p class="async__text text">
-              Если же промисы не завистя друг от друга, то возможно два варианта развития. Например, есть три функции, возвращающие промисы <code>cookFood()</code>, 
-              <code>sendParcelTo(name)</code> и <code>cleanHouse()</code>. Ад промисов будет выглядеть так:
-            </p>
-<pre>
-  <span class="code__examples">
-    cookFood()
-      .then( () => {                  
-        return sendParcelTo('Gloria Gaynor')                  
-          .then( () => {                  
-            return cleanHouse();                  
-          });                  
-        });
-  </span>
-</pre>
-            <p class="async__text text">
-              В зависимости от того - важен ли нам порядок выполнения промисов или нет, можно упростить код следующим образом. Если порядок не важен, то воспользуемся методом
-              <code>Promise.all()</code>, который возвращает промис, когда выполнятся все промисы, переданные ему в качестве аргумента. Получится такой код:
-            </p>
-<pre>
-  <span class="code__examples">
-    Promise.all([
-      cookFood(),
-      sendParcelTo('Gloria Gaynor'),
-      cleanHouse()
-    ]);
-  </span>
-</pre>
-            <p class="async__text text">
-              Если же нам важен порядок выполнения независимых друг от друга промисов, то можем записать в таком виде (порядок выбран произвольный):
-            </p>
-<pre>
-  <span class="code__examples">
-    cookFood()
-      .then( () => sendParcelTo('Gloria Gaynor') )
-      .then( () => cleanHouse() );
-  </span>
-</pre>
-            <p class="async__text text">
-              Может возникнуть ситуация, когда у нас есть несколько зависящих друг от друга промисов. Например, есть четыре функции, возвращающие промисы <code>goFoodShopping()</code>, 
-              <code>buyProducts(shop)</code>, <code>buySpices(shop)</code> и <code>cookBestFood()</code>. Ад промисов будет выглядеть так:
-            </p>
-<pre>
-  <span class="code__examples">
-    goFoodShopping()
-      .then( (shop) => {
-        return buyProducts(shop)
-          .then( (products) => {
-            return buySpices(shop)
-              .then( (spices) => {
-                return cookBestFood(products, spices);
-              });
-            });
-          });  
-  </span>
-</pre>
-            <p class="async__text text">
-              Упростим этот код, ведь ссылки промисы можно сохранять в переменные:
-            </p>
-<pre>
-  <span class="code__examples">
-    const shopPromise = goFoodShopping()
-
-    const productsPromise = shopPromise
-      .then(buyProducts);
-
-    const spicesPromise = shopPromise
-      .then(buySpices);
-
-    Promise.all([
-      productsPromise,
-      spicesPromise
-    ])
-      .then( (values) => {
-        const products = values[0];
-        const spices = values[1];
-        return cookBestFood(products, spices);
-      });
-  </span>
-</pre>
+        </div>
+      </div>
+      <div class="aboutData__item aboutData__item_reverse">
+        <img src="/assets/img/feature_4.png" class="aboutData__item-image" alt="data image">
+        <div class="aboutData__item-description column-wrapper">
+          <h4 class="aboutData__feature title__h5">
+            SMART ALERTS
+          </h4>
+          <h3 class="aboutData__feature-title title__h3">
+            Smart Alerts For All Owners
+            Of Affected Entities
+          </h3>
+          <p class="aboutData__feature-desc text__feature">
+            Be the first one to know about data incidents. ODD Platform alerts you right after the first ETL execution — before a new model gets a chance to train on wrong data or your report misinformes someone.
+          </p>
+          <div class="aboutData__feature-buttons">
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Explore Demo
+              </button>
+            </a>
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Schedule Demo
+              </button>
+            </a>
           </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">5. How would you handle exceptions in JS? Two options.</p>
-          <a href="#hidden11" class="clicker" onclick="view('hidden11'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden11" style="display: none;">
-            <p class="async__text text">
-              Ответ: для того чтобы обработать ошибки мы можем "выборосить" исключение с помощью инструкции <code>throw</code>, создать объект <code>Error</code>. После 
-              этого выполнение скрипта остановится, либо нужно обработать ошибку. Очень удобно обрабатывать ошибки в конструкции <code>try...catch</code>. Блок <code>try</code> нужен для 
-              попытки выполнения кода, и если код содержит в себе ошибку, то эта ошибка выбрасывается в блок <code>catch</code>. Блок <code>catch</code> выполняет инструкции, необходимые для обработки ошибки. 
-              Получается, что блок <code>catch</code> может обработать только те ошибки, о которых знает. Те, ошибки о которых он не знает можно пробросить (с помощью <code>throw</code>) дальше, например, в следующие блоки <code>catch</code>. 
-              Также в этой конструкции есть третий блок - <code>finally</code>, необходимый для той части кода, которая должна быть выполнена несмотря на возникшие ошибки. 
-            </p>
-            <p class="async__text text">
-              Сейчас, с синтаксисом <code>async/await</code> мы можем использовать <code>try...catch</code> для обработки ошибок также, как если бы работали с синхронным кодом.
-            </p>
+        </div>
+      </div>
+      <div class="aboutData__item">
+        <img src="/assets/img/feature_5.png" class="aboutData__item-image" alt="data image">
+        <div class="aboutData__item-description column-wrapper">
+          <h4 class="aboutData__feature title__h5">
+            SEAMLESS COLLABORATION
+          </h4>
+          <h3 class="aboutData__feature-title title__h3">
+            Bring Data and ML Teams together
+          </h3>
+          <p class="aboutData__feature-desc text__feature">
+            Facilitate and scale ML operations. ODD Platform makes ML world a part of data discovery by operating ML entities as first citizens. Now your Data science and Data Engineering teams are on the same page. Onboard new data people just by granting access to the platform.
+          </p>
+          <div class="aboutData__feature-buttons">
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Explore Demo
+              </button>
+            </a>
+            <a href="/">
+              <button class="button aboutData__feature-button">
+                Schedule Demo
+              </button>
+            </a>
           </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">6. What framework would you choose for development? Explain why.</p>
-          <a href="#hidden12" class="clicker" onclick="view('hidden12'); return false">Answer. Click me!</a>
-          <div class="async__answer" id="hidden12" style="display: none;">
-            <p class="async__text text">
-              Ответ: честно говоря, сложный для меня вопрос т.к. пока не имею опыта работы ни на одном из фреймворков. Поэтому поделюсь своими мыслями по поводу трех наиболее популярных - <code>React</code>, <code>Vue</code> и <code>Angular</code>. 
-              Конечно же первостепенно привлекает <code>Vue</code> из-за его простоты и низкого порога входа. Из-за его простоты <code>Vue</code> получается очень удобным и лаконичным, пользуется популярностью у разработчиков. Но очень сильно отталкивает то, что
-              <code>Vue</code> не имеет поддержки крупных компаний. Есть риск, что команда разработчиков <code>Vue</code> перестанет поддерживать свой проект. Поэтому крупные приложения писать на <code>Vue</code> опасненько.
-            </p>
-            <p class="async__text text">
-              <code>React</code> - поддержка от Facebook, а соответственно и популярность у множества разработчиков позволяет активно развивать как сам проект, так и находить современные решения на практике при работе с данным фреймворком. Разрабатывая приложения на <code>React</code>
-              мы имеем доступ к низкоуровневому функционалу, что, несомненно, будет плюсом для профессионалов и минусом для новичков - высок риск запутаться в своем же коде.
-            </p>
-            <p class="async__text text">
-              <code>Angular</code> - поддержка от Google? что опять таки означает популярность у разработчиков и, следовательно, развитие фреймворка. Очень большой фреймворк с огромным функционалом, постоянная поддержка. Т.к. <code>Angular</code> использует <code>TypeScript</code> - 
-              это дает очень большое удобство в написании кода и удобный функционал. У <code>Angular</code> практически не надо никаких доп. инструментов - практически все есть в коробке. 
-            </p>
-            <p class="async__text text">
-              Что бы выбрал я? Конечно же зависит от поставленной задачи. Если приложение рационально писать на <code>Angular</code>, то значит его и надо выбирать, а знания лишними не будут. 
-              Абстрагируясь от поставленной задачи я бы выбрал <code>React</code>, посчитав его золотой серединой.
-            </p>
-          </div>
-        </li>
-        <li class="async__item">
-          <p class="async__question">7. Code task</p>
-          <a href="https://stackblitz.com/edit/js-6hzvda?file=index.js" class="clicker" target="_blank">Solution for JS task. Click me!</a>
-          <br>
-          <a href="https://stackblitz.com/edit/typescript-hewq1e?file=index.ts" class="clicker" target="_blank">Solution for TS task. Click me!</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </section>
-
-  <section class="typescript">
-    <div class="container">
-      <h2 class="typescript__title title__h2">Block 3: TypeScript</h2>
-      <ul class="typescript__list text">
-        <li class="typescript__item">
-          <p class="typescript__question">1. Is it possible to check types in runtime? If so, how?</p>
-          <a href="hidden14" class="clicker" onclick="view('hidden14'); return false">Answer. Click me!</a>
-          <div class="typescript__answer" id="hidden14" style="display: none;">
-            <p class="typescript__text text">
-              Ответ: стандартными инструментами <code>JS</code> или <code>TS</code> проверить типы во время выполнения кода нельзя. Потому что, когда код компилируется из <code>TS</code> в 
-              <code>JS</code> - все типы и проверки исчезают в чистом <code>JS</code>. Типы и проверки присутствуют только на этапе разработки на <code>TS</code>. Но тем не менее есть возможность
-              валидации типов в рантайме с помощью сторонних библиотек. Одна из них, например, использует обертку, внутри которой будет необходиммая логика проверки типов. Эту обертку можно 
-              применять к проверяемой функции и, при несоответствии типов, ловить ошибку конструкцией <code>try...catch</code>.
-            </p>
+  <section class="container observe">
+    <div class="column-wrapper observe__description">
+      <h4 class="observe__feature title__h5">
+        PROACTIVE DATA MONITORING AND OBSERVABILITY
+      </h4>
+      <h3 class="observe__feature-title title__h3">
+        Trusted by modern data-driven companies
+      </h3>
+      <p class="observe__feature-desc text__feature">
+        Gain confidence in what you ship. Catch data issues before they end up in production.
+      </p>
+      <div class="observe__cards">
+        <div class="observe__card">
+          <h4 class="observe__card-title title__h4">Effortless deployment</h4>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">No complex infra required</p>
           </div>
-        </li>
-        <li class="typescript__item">
-          <p class="typescript__question">2. What is the difference between private and protected fields?</p>
-          <a href="#hidden15" class="clicker" onclick="view('hidden15'); return false">Answer. Click me!</a>
-          <div class="typescript__answer" id="hidden15" style="display: none;">
-            <p class="typescript__text text">
-              Ответ: модификатор <code>private</code> позволяет получить доступ к соответствующему свойству (или конструктору, методу) только внутри класса, где он был использован. 
-              Модификатор <code>protected</code> позволяет получить доступ к соответствующему свойству (или конструктору, методу) внутри своего класса и внутри классов-наследников. 
-            </p>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">PostgreSQL</p>
           </div>
-        </li>
-        <li class="typescript__item">
-          <p class="typescript__question">3. How do interfaces help in development?</p>
-          <a href="#hidden16" class="clicker" onclick="view('hidden16'); return false">Answer. Click me!</a>
-          <div class="typescript__answer" id="hidden16" style="display: none;">
-            <p class="typescript__text text">
-              Ответ: интерфейсы в <code>TypeScript</code> нужны для того, чтобы описать форму объекта (с указанием типов соответствующих свойств или методов). Таким образом, мы можем указать тип
-              объекта, как интерфейс, и тогда будет происходить проверка на наличие соответствующих свойств и их типов. Можно реализовывать интерфейсы, например, в классах ( <code>implements</code> ). 
-              Это позволяет описать класс с учетом свойств и их типов, указанных в реализуемом интерфейсе. Классы поддерживают множественную реализацию интерфейсов. Интерфейсы могут наследоваться ( <code>extends</code> ) и могут наследоваться от нескольких 
-              интерфейсов в отличии от классов.
-            </p>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">Helpful team</p>
           </div>
-        </li>
-        <li class="typescript__item">
-          <p class="typescript__question">4. How would you pass arguments into a Class?</p>
-          <a href="#hidden17" class="clicker" onclick="view('hidden17'); return false">Answer. Click me!</a>
-          <div class="typescript__answer" id="hidden17" style="display: none;">
-            <p class="typescript__text text">
-              Ответ: насколько я понял вопрос - сложность может заключаться в том, что мы можем не знать заранее какого типа будут аргументы, передаваемые в класс. Типом <code>any</code> в данном случае пользоваться неразумно,
-              потому что входной тип может быть преобразован внутри объекта, особенно, если передаваемый аргумент используется в каком-то методе. Тогда согласно синтаксису и входной и выходной тип будут валидны (потому что указан <code>any</code>), но 
-              фактически они могут различаться. Чтобы избежать этого используются дженерики (Generics). Они позволяют указывать некий "обобщенный" тип, который будет заменен на конкретный, переданный пользователем. Конструкция <code>&ltT&gt</code> перехватит на входе
-              тип аргумента и подменит им все <code>T</code>.
-            </p>
+        </div>
+        <div class="observe__card">
+          <h4 class="observe__card-title title__h4">Guaranteed support</h4>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">Dedicated team</p>
           </div>
-        </li>
-        <li class="typescript__item">
-          <p class="typescript__question">5. Code task</p>
-          <a href="https://stackblitz.com/edit/typescript-8vrqyu?file=index.ts" class="clicker" target="_blank">Task solution. Click me!</a>
-        </li>
-      </ul>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">We’re always ready to help</p>
+          </div>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">Strong growing community</p>
+          </div>
+        </div>
+        <div class="observe__card">
+          <h4 class="observe__card-title title__h4">Forever Open-Source</h4>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">No hidden agenda</p>
+          </div>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">Public development</p>
+          </div>
+          <div class="observe__card-advantageCont">
+            <img src="/assets/img/checkIcon.png" class="observe__card-icon" alt="check icon">
+            <p class="observe__card-advantage text__card-feature">Aiming to join LFAI</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
-
-
-
 </body>
-
-<script>function view(n) {
-  style = document.getElementById(n).style;
-  style.display = (style.display == 'block') ? 'none' : 'block';
-}</script>
-
 </html>

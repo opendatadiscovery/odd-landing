@@ -1,14 +1,15 @@
 @import 'utils/vars';
 @import 'utils/mixins';
-@import 'utils/fonts';
 @import 'utils/reset';
+@import "utils/fonts";
 
 
 /* site styles */
 @import 'elements/1_header.scss';
 @import 'elements/2_welcome.scss';
-@import 'elements/3_common.scss';
-@import 'elements/4_async.scss';
+@import 'elements/3_aboutODD';
+@import 'elements/4_aboutData';
+@import 'elements/5_observability';
 /* end site styles */
 
 
@@ -110,28 +111,8 @@ section,
   }
 }
 
-.title__h2 {
-  font-weight: 700;
-  font-size: rem(42px);
-  line-height: 1.0;
-  display: inline-block;
-
-  @media screen and (max-width: $smDesktopWidth) {
-    font-size: rem(36px);
-  }
-
-  @media screen and (max-width: $phoneWidth) {
-    text-align: center;
-    font-size: rem(34px);
-  }
-
-  /* @media screen and (max-width: $smPhoneWidth) {
-    font-size: 1.2rem;
-  } */
-}
-
 .text {
-  font-family: 'lato', sans-serif;
+  //font-family: 'lato', sans-serif;
   color:$keycolor-dark;
   font-weight: $mainFontWeight;
   font-size: rem(18px);
@@ -187,7 +168,7 @@ pre {
 .column-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: space-between;
   align-items: center;
   //margin: 0 auto;
   //width: 100%;
@@ -209,8 +190,7 @@ pre {
   width: 100%;
   flex: 0 0 auto;
   position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
+  margin: 20px auto 0;
   @media screen and (max-width: $smDesktopWidth) {
     max-width: $tableWidth;
   }
@@ -231,12 +211,77 @@ pre {
   border: 2px solid $border-base;
   border-radius: 5px;
   background: none;
-  margin: 0 20px;
+  margin: 0 10px;
   min-width: 180px;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.title__h2 {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(44px);
+  line-height: rem(73px);
+  display: inline-block;
+}
+
+.title__h3 {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(32px);
+  line-height: rem(42px);
+  color: $text-dark;
+  display: inline-block;
+}
+
+.title__h4 {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(24px);
+  line-height: rem(28px);
+  color: $text-dark;
+  display: inline-block;
+}
+
+.title__h5 {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 700;
+  font-size: rem(16px);
+  line-height: rem(26px);
+  color: $text-secondary;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.text__description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: rem(20px);
+  line-height: rem(30px);
+  color: $text-grey;
+  text-align: center;
+}
+
+.text__feature {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 400;
+  font-size: rem(20px);
+  line-height: rem(33px);
+  color: $text-feature;
+  text-align: left;
+  display: inline-block;
+}
+
+.text__card-feature {
+  font-family: 'DM sans', sans-serif;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(28px);
+  color: $text-feature;
+  text-align: left;
+  display: inline-block;
 }
 
 

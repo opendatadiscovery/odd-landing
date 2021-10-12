@@ -1,6 +1,5 @@
 .welcome {
-    margin-top: 70px;
-    width: 620px;
+    width: 620px !important;
 
     &__status {
         font-family: 'Poppins', sans-serif;
@@ -22,11 +21,6 @@
 
     &__description {
         margin-top: 15px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 400;
-        font-size: rem(20px);
-        line-height: rem(30px);
-        color: $text-grey;
     }
 
     &__buttons {

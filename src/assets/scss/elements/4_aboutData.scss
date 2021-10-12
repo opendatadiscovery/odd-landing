@@ -1,0 +1,40 @@
+.aboutData {
+    width: 1280px;
+
+    &__item {
+        @include flex-rsb();
+        width: $desktopWidth;
+        flex-wrap: nowrap;
+        margin-top: 70px;
+
+        &-image { width: 622px }
+
+        &-description {
+            width: 475px;
+            height: 100%;
+            align-items: flex-start !important;
+        }
+
+        &_reverse { flex-direction: row-reverse }
+    }
+
+    &__feature {
+        &-desc {
+            margin-top: 30px;
+        }
+
+        &-buttons {
+            margin-top: 50px;
+        }
+
+        &-button {
+            padding: 8px 22px !important;
+            margin: 0 12px 0 0 !important;
+            @include button-hover();
+        }
+    }
+}
+
+.text__feature-desc {
+
+}

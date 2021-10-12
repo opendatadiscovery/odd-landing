@@ -63,14 +63,14 @@
           loader: 'babel-loader',
           exclude: '/node_modules/'
         },
-        {
-          // Fonts
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]'
-          }
-        },
+        // {
+        //   // Fonts
+        //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        //   loader: 'file-loader',
+        //   options: {
+        //     name: '[name].[ext]'
+        //   }
+        // },
         {
           test: /\.(gif|png|jpg|jpeg|svg)?$/,
           loader: 'file-loader',
@@ -142,11 +142,11 @@
             from: `${PATHS.src}/${PATHS.assets}img`,
             to: `${PATHS.assets}img`
           },
-          // Fonts:
-          {
-            from: `${PATHS.src}/${PATHS.assets}fonts`,
-            to: `${PATHS.assets}fonts`
-          },
+          // // Fonts:
+          // {
+          //   from: `${PATHS.src}/${PATHS.assets}fonts`,
+          //   to: `${PATHS.assets}fonts`
+          // },
           // Static (copy to '/'):
           {
             from: `${PATHS.src}/static`,
