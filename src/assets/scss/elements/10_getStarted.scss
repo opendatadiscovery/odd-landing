@@ -1,0 +1,43 @@
+.getStarted {
+  background-color: #F5ECF9;
+
+  &__cards {
+    margin-top: 40px;
+    @include flex-rsb();
+  }
+
+  &__card {
+    width: 519px;
+    height: 381px;
+    background: $background-primary;
+    border-radius: 10px;
+    padding: 70px;
+    margin-right: 30px;
+    &:last-child {margin-right: 0}
+  }
+
+  &__card-logo {
+    width: 253px;
+  }
+
+  &__card-desc {
+    margin-top: 18px;
+  }
+
+  &__card-button {
+    margin-top: 85px !important;
+    margin-left: 0 !important;
+    padding: 22px 68px !important;
+    width: 100%;
+  }
+
+  &__card-button-docker {
+    color: $text-light !important;
+    background-color: $background-secondary !important;
+    @include button-hover-reverse();
+  }
+
+  &__card-button-kuber {
+    @include button-hover();
+  }
+}
