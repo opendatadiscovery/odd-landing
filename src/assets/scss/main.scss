@@ -10,6 +10,8 @@
 @import 'elements/3_aboutODD';
 @import 'elements/4_aboutData';
 @import 'elements/5_observability';
+@import 'elements/6_tools';
+@import 'elements/7_press';
 /* end site styles */
 
 
@@ -274,7 +276,31 @@ pre {
   display: inline-block;
 }
 
-.text__card-feature {
+.card {
+  background-color: $background-primary;
+  box-shadow: 0 15px 32px rgba(46, 79, 255, 0.1);
+  border-radius: 5px;
+  margin-right: 25px;
+  width: 390px;
+  padding: 50px;
+  &:last-child {margin-right: 0}
+}
+
+.card-advantage-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-top: 15px;
+  &:first-of-type {margin-top: 30px}
+}
+
+.card-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.card-advantage-text {
   font-family: 'DM sans', sans-serif;
   font-weight: 400;
   font-size: rem(16px);
@@ -283,6 +309,5 @@ pre {
   text-align: left;
   display: inline-block;
 }
-
 
 

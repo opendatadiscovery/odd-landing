@@ -1,0 +1,14 @@
+.tools {
+  padding: 100px 0;
+  &__feature-desc { margin-top: 10px }
+  &__logos { margin-top: 55px }
+  &__comingSoon {
+    margin: 50px 0 40px 0;
+    font-family: "DM sans", sans-serif;
+    color: #B2B2B2;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33px;
+    text-align: center;
+  }
+}
