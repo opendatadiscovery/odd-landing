@@ -31,7 +31,7 @@
     },
     output: {
       filename: `${PATHS.assets}js/[name].[contenthash].js`,
-      path: PATHS.dist,
+      path: PATHS.docs,
       publicPath: ''
     },
     optimization: {
