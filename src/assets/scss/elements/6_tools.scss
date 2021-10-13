@@ -1,6 +1,16 @@
 .tools {
   padding: 100px 0;
-  &__feature-desc { margin-top: 10px }
+  &__feature-title {
+    @media screen and (max-width: $phoneWidth) {
+      text-align: center !important;
+    }
+  }
+  &__feature-desc {
+    margin-top: 10px;
+    @media screen and (max-width: $phoneWidth) {
+      text-align: center !important;
+    }
+  }
   &__logos {
     margin-top: 55px;
     @media screen and (max-width: $phoneWidth) {

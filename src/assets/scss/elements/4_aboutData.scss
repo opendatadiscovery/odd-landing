@@ -23,11 +23,15 @@
             max-width: 475px !important;
             height: 100%;
             align-items: flex-start !important;
+            @media screen and (max-width: $phoneWidth) {
+                margin-top: 10px;
+            }
         }
 
         &_reverse { flex-direction: row-reverse }
         @media screen and (max-width: $phoneWidth) {
             @include flex-cc();
+            margin-top: 40px;
         }
     }
 

@@ -188,7 +188,7 @@ li {
   line-height: rem(42px);
   color: $text-dark;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   @media screen and (max-width: $smDesktopWidth) {
     font-size: rem(26px);
     line-height: rem(35px);
@@ -273,7 +273,7 @@ li {
   font-size: rem(20px);
   line-height: rem(33px);
   color: $text-feature;
-  text-align: center;
+  text-align: left;
   display: inline-block;
   @media screen and (max-width: $smDesktopWidth) {
     font-size: rem(16px);

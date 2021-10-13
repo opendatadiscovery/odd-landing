@@ -13,9 +13,16 @@
   }
 
   &__feature {
-    &-title { margin-top: 10px }
+    &-title { margin-top: 10px;
+      @media screen and (max-width: $phoneWidth) {
+        text-align: center !important;
+      }}
 
-    &-desc {}
+    &-desc {
+      @media screen and (max-width: $phoneWidth) {
+        text-align: center !important;
+      }
+    }
   }
 
   &__cards {
