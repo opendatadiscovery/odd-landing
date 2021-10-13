@@ -1,7 +1,12 @@
 .tools {
   padding: 100px 0;
   &__feature-desc { margin-top: 10px }
-  &__logos { margin-top: 55px }
+  &__logos {
+    margin-top: 55px;
+    @media screen and (max-width: $phoneWidth) {
+      margin-top: 35px;
+    }
+  }
   &__comingSoon {
     margin: 50px 0 40px 0;
     font-family: "DM sans", sans-serif;
@@ -10,5 +15,18 @@
     font-weight: 500;
     line-height: 33px;
     text-align: center;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: rem(16px);
+      line-height: rem(25px);
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: rem(13px);
+      line-height: rem(21px);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      font-size: rem(12px);
+      line-height: rem(17px);
+      margin: 25px 0 20px 0;
+    }
   }
 }

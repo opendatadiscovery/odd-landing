@@ -1,6 +1,8 @@
 .welcome {
-    width: 620px !important;
     padding: 50px 0;
+    @media screen and (max-width: $phoneWidth) {
+        padding: 10px 0;
+    }
 
     &__status {
         font-family: 'Poppins', sans-serif;
@@ -12,12 +14,6 @@
 
     &__title {
         margin-top: 20px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: rem(64px);
-        line-height: rem(64px);
-        color: $text-primary;
-        text-align: center;
     }
 
     &__description {
@@ -26,6 +22,9 @@
 
     &__buttons {
         margin-top: 50px;
+        @media screen and (max-width: $phoneWidth) {
+            margin-top: 20px;
+        }
 
         &_deploy {
             color: $text-light !important;

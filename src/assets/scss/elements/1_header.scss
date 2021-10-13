@@ -4,6 +4,12 @@
     height: auto;
     background-color: $background-primary;
     padding: 50px 73px;
+    @media screen and (max-width: $tableWidth) {
+        padding: 30px 40px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        @include flex-cc();
+    }
 
     &__logo-cont {
         width: 238px;
@@ -18,6 +24,9 @@
     &__buttons {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: $phoneWidth) {
+            margin-top: 20px;
+        }
 
         &_slack, &_github {
             border-color: transparent !important;

@@ -1,14 +1,27 @@
 .footer {
-  padding: 80px 120px;
+  padding: 80px 100px;
   background-color: #010E43;
   @include flex-rsb();
   align-items: flex-start;
+  @media screen and (max-width: $desktopWidth) {
+    @include flex-cc();
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 30px 60px;
+  }
 
   &__item-cont {
     display: flex;
     flex-direction: column;
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
     height: 100%;
+    margin-right: 10px;
+    &:last-child {margin-right: 0}
+    @media screen and (max-width: $desktopWidth) {
+      margin-right: 0;
+      margin-top: 30px;
+    }
   }
 
   &__cont-title {
@@ -19,14 +32,15 @@
   &__logo-cont {
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
   }
 
   &__logo {
-    width: 255px;
+    max-width: 255px;
   }
 
   &__link {
-    margin-top: 40px;
+    margin-top: 30px;
     font-family: 'lato', sans-serif;
     font-size: 15px;
     color: $text-light;
@@ -56,6 +70,8 @@
 
   &__social-cont {
     margin-top: 50px;
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   &__social-logo {
@@ -67,5 +83,8 @@
 
   &__subscribe {
     height: 220px;
+    @media screen and (max-width: $desktopWidth) {
+      height: 0;
+    }
   }
 }

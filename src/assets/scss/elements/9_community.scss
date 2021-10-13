@@ -1,20 +1,36 @@
 .community {
-  padding: 110px 0;
+  padding: 110px 0 !important;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 90px 0 !important;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 40px 0 !important;
+  }
 
   &__cards {
     display: flex;
     margin-top: 50px;
+    @media screen and (max-width: $smDesktopWidth) {
+      @include flex-cc();
+    }
+    @media screen and (max-width: $phoneWidth) {
+      margin-top: 20px;
+    }
   }
 
   &__card {
     display: flex;
-    width: 664px;
-    height: 176px;
+    max-width: 664px;
+    width: 100%;
     background: $background-primary;
     border: 1px solid $border-card;
     border-radius: 10px;
     margin-right: 40px;
     &:last-child {margin-right: 0}
+    @media screen and (max-width: $smDesktopWidth) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__card-icon-cont {
@@ -23,27 +39,60 @@
     justify-content: center;
     width: 190px;
     background-color: $background-gray;
+    @media screen and (max-width: $desktopWidth) {
+      width: 190px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      width: 140px;
+    }
   }
 
   &__card-icon {
     width: 63px;
     height: 63px;
+    @media screen and (max-width: $desktopWidth) {
+      width: 53px;
+      height: 53px;
+    }
+    @media screen and (max-width: $tableWidth) {
+      width: 43px;
+      height: 43px;
+    }
   }
 
   &__card-description {
-    padding: 45px 0 45px 45px;
+    width: 100%;
+    padding: 30px 45px;
     @include flex-cc();
     align-items: flex-start;
+    @media screen and (max-width: $phoneWidth) {
+      padding: 15px 15px;
+    }
   }
 
-  &__card-links { margin-top: 10px }
+  &__card-links { margin-top: 10px;
+  display: flex;
+  flex-wrap: nowrap}
 
   &__card-link {
     margin-right: 50px;
     font-family: 'DM sans', sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 33px;
+    font-size: 16px;
+    line-height: 26px;
     color: #0A30F7;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: rem(14px);
+      line-height: rem(22px);
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: rem(11px);
+      line-height: rem(18px);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      font-size: rem(9px);
+      line-height: rem(15px);
+      margin-right: 10px;
+    }
   }
 }

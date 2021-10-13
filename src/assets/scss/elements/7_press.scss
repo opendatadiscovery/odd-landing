@@ -1,9 +1,16 @@
 .press {
   background-color: $background-press;
-  padding: 90px 0;
+  padding: 90px 0 !important;
+  @media screen and (max-width: $tableWidth) {
+    padding: 60px 0 !important;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 30px 0 !important;
+  }
 
   &__card {
-    width: $desktopWidth;
+    max-width: $desktopWidth;
+    width: $smDesktopWidth;
     height: 64px;
     display: flex;
     align-items: center;
@@ -12,16 +19,46 @@
     padding: 12px 45px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     &:first-of-type { margin-top: 12px }
+    @media screen and (max-width: $smDesktopWidth) {
+      width: 100%;
+    }
+    @media screen and (max-width: $tableWidth) {
+      width: 100%;
+    }
+    @media screen and (max-width: $phoneWidth) {
+      width: 100%;
+      padding: 6px 20px;
+    }
   }
 
-  &__logo-cont { width: 225px }
+  &__logo-cont {
+    max-width: 225px;
+    margin-right: 10px;
+    @media screen and (max-width: $phoneWidth) {
+      width: 100%;
+
+    }
+  }
 
   &__logo {
     height: 40px;
+
   }
 
   &__link {
     color: #2644D9;
     text-decoration: underline;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: rem(14px);
+      line-height: rem(22px);
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: rem(11px);
+      line-height: rem(18px);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      font-size: rem(9px);
+      line-height: rem(15px);
+    }
   }
 }

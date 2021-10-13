@@ -1,41 +1,74 @@
 .aboutData {
     width: 1280px;
     padding: 110px 0;
+    @media screen and (max-width: $phoneWidth) {
+        padding: 10px 0;
+    }
 
     &__item {
         @include flex-rsb();
-        width: $desktopWidth;
+        width: 100%;
         flex-wrap: nowrap;
         margin-top: 70px;
+        @media screen and (max-width: $phoneWidth) {
+            margin-top: 30px;
+        }
 
-        &-image { width: 622px }
+        &-image {
+            max-width: 622px;
+            min-width: 320px;
+        }
 
         &-description {
-            width: 475px;
+            max-width: 475px !important;
             height: 100%;
             align-items: flex-start !important;
         }
 
         &_reverse { flex-direction: row-reverse }
+        @media screen and (max-width: $phoneWidth) {
+            @include flex-cc();
+        }
     }
 
     &__feature {
         &-desc {
             margin-top: 30px;
+            @media screen and (max-width: $phoneWidth) {
+                margin-top: 10px;
+            }
         }
 
         &-buttons {
             margin-top: 50px;
+            display: flex;
+            flex-wrap: nowrap;
+            @media screen and (max-width: $phoneWidth) {
+                justify-content: center;
+                margin-top: 10px;
+            }
         }
 
         &-button {
             padding: 8px 22px !important;
             margin: 0 12px 0 0 !important;
             @include button-hover();
+            @media screen and (max-width: $smDesktopWidth) {
+                padding: 6px 14px !important;
+                margin: 0 10px 0 0 !important;
+            }
+            @media screen and (max-width: $tableWidth) {
+                padding: 4px 10px !important;
+                margin: 0 10px 0 0 !important;
+            }
+            //@media screen and (max-width: $phoneWidth) {
+            //    padding: 8px 22px !important;
+            //    margin: 0 12px 0 0 !important;
+            //}
         }
     }
 }
 
-.text__feature-desc {
-
+.margin {
+    width: 100px;
 }

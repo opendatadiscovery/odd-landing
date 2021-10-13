@@ -1,6 +1,8 @@
 .aboutODD {
-    width: 952px !important;
     padding: 50px 0;
+    @media screen and (max-width: $phoneWidth) {
+        padding: 10px 0;
+    }
 
     &__description {
         margin-top: 15px;
@@ -8,5 +10,6 @@
 
     &__ODDImage {
         margin-top: 40px;
+        width: 100%;
     }
 }
