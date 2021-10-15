@@ -56,6 +56,12 @@
     color: $text-light;
   }
 
+  &__shedule-button-cont {
+    @media screen and (max-width: $tableWidth) {
+      text-align: center;
+    }
+  }
+
   &__shedule-button {
     border: 1px solid #ffffff !important;
     padding: 26px 92px !important;
@@ -65,6 +71,10 @@
       background-color: #ffffff;
       color: #010E43 !important;
       border-color: #010E43;
+    }
+    @media screen and (max-width: $tableWidth) {
+      margin: 30px 0 20px 0 !important;
+      padding: 15px 40px !important;
     }
   }
 
