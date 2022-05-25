@@ -40,6 +40,15 @@
       gtag('config', 'G-W8Y2JMLBRS');
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Ads: 10888243056 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10888243056"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-10888243056');
+    </script>
+
   </head>
 
   <body>
@@ -587,6 +596,27 @@
           </a>
         </div>
       </div>
+
+      <script>
+        document.addEventListener('click', function(e) {
+          if (e.target.innerText == "Deploy & Try") {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-10888243056/dZA8CMLOz8ADEPDO9cco'
+            });
+          }
+          if (e.target.innerText == "Schedule Demo") {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-10888243056/bw7ICJ_5m8ADEPDO9cco'
+            });
+          }
+          if (e.target.innerText == "Get started") {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-10888243056/wC2ICPb5m8ADEPDO9cco'
+            });
+          }
+        })
+
+      </script>
     </footer>
 
   </body>
