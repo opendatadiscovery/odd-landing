@@ -645,6 +645,19 @@
           }
         })
 
+        document.addEventListener('click', function(e) {
+          if (e.target.matches('a[href="https://docs.opendatadiscovery.org/"] , [href="https://docs.opendatadiscovery.org/"] *')) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-10888243056/7PsMCN2c8M8DEPDO9cco'
+            });
+          }
+          if (e.target.matches('a[href="https://medium.com/opendatadiscovery/"] , [href="https://medium.com/opendatadiscovery/"] *')) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-10888243056/5AD_CNaWpdADEPDO9cco'
+            });
+          }
+        })
+
       </script>
     </footer>
 
