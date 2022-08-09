@@ -35,5 +35,9 @@
         &_schedule {
             @include button-hover();
         }
+
+        &_demo {
+            @include button-hover();
+        }
     }
 }
