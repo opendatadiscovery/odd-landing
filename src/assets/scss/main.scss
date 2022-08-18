@@ -122,6 +122,7 @@ li {
   &:last-child { margin-right: 0 }
   white-space: nowrap;
   @media screen and (max-width: $smDesktopWidth) {
+    padding: 10px 18px;
     font-size: rem(14px);
   }
   @media screen and (max-width: $tableWidth) {
