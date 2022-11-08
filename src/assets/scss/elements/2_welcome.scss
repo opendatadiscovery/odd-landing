@@ -21,6 +21,8 @@
     }
 
     &__buttons {
+        display: flex;
+        flex-wrap: nowrap;
         margin-top: 50px;
         @media screen and (max-width: $phoneWidth) {
             margin-top: 20px;
