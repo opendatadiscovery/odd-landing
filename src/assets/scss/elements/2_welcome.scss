@@ -4,7 +4,34 @@
         padding: 10px 0;
     }
 
+    &__saas {
+        width: 100%;
+        background-color: $background-light;
+        padding: 12px 32px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: $tableWidth) {
+            flex-direction: column;
+        }
+
+        &_offer {
+            @media screen and (max-width: $tableWidth) {
+               margin-bottom: 8px;
+            }
+        }
+
+        &_offer p {
+            @media screen and (max-width: $tableWidth) {
+                text-align: center;
+            }
+        }
+    }
+
     &__status {
+        margin-top: 24px;
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: rem(18px);
@@ -32,6 +59,20 @@
             color: $text-light !important;
             background-color: $background-secondary !important;
             @include button-hover-reverse();
+        }
+
+        &_saas {
+            padding: 12px 20px !important;
+            color: $text-light !important;
+            background-color: $background-secondary !important;
+            @media screen and (max-width: $tableWidth) {
+                padding: 6px 10px !important;
+            }
+        }
+
+        &_saas:hover {
+            color: $text-secondary !important;
+            background-color: transparent !important;
         }
 
         &_schedule {
