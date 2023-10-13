@@ -20,23 +20,8 @@
   align-items: center;
 }
 
-// hover for buttons
-@mixin button-hover() {
-  &:hover {
-    background-color: $background-secondary;
-    color: $text-light;
-  }
-}
-
-@mixin button-hover-reverse() {
-  &:hover {
-    color: $text-secondary !important;
-    background-color: $background-primary !important;
-  }
-}
-
 // px to rem
-@function rem($pixels, $context: $mainFontSize) {
+@function rem($pixels, $context: 16px) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }

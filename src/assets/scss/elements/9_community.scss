@@ -1,20 +1,20 @@
 .community {
   padding: 110px 0 !important;
   @media screen and (max-width: $smDesktopWidth) {
-    padding: 90px 0 !important;
+    padding: $gap-lg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: 40px 0 !important;
+    padding: $gap-bg 0 !important;
   }
 
   &__cards {
     display: flex;
-    margin-top: 50px;
+    margin-top: $gap-bg;
     @media screen and (max-width: $smDesktopWidth) {
       @include flex-cc();
     }
     @media screen and (max-width: $phoneWidth) {
-      margin-top: 20px;
+      margin-top: $gap;
     }
   }
 
@@ -25,11 +25,11 @@
     background: $background-primary;
     border: 1px solid $border-card;
     border-radius: 10px;
-    margin-right: 40px;
+    margin-right: $gap-bg;
     &:last-child {margin-right: 0}
     @media screen and (max-width: $smDesktopWidth) {
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-bottom: $gap-min;
     }
   }
 
@@ -62,37 +62,36 @@
 
   &__card-description {
     width: 100%;
-    padding: 30px 45px;
+    padding: $gap $gap-bg;
     @include flex-cc();
     align-items: flex-start;
     @media screen and (max-width: $phoneWidth) {
-      padding: 15px 15px;
+      padding: $gap-sm;
     }
   }
 
-  &__card-links { margin-top: 10px;
-  display: flex;
-  flex-wrap: nowrap}
+  &__card-links {
+    margin-top: $gap-min;
+    display: flex;
+    flex-wrap: nowrap
+  }
 
   &__card-link {
-    margin-right: 50px;
-    font-family: 'DM sans', sans-serif;
+    margin-right: $gap-bg;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: var(--font-16);
     color: #0A30F7;
     @media screen and (max-width: $smDesktopWidth) {
-      font-size: rem(14px);
-      line-height: rem(22px);
+      font-size: var(--font-16);
     }
     @media screen and (max-width: $tableWidth) {
-      font-size: rem(11px);
-      line-height: rem(18px);
+      font-size: var(--font-12);
+      line-height: var(--lh-sm);
     }
     @media screen and (max-width: $phoneWidth) {
-      font-size: rem(9px);
-      line-height: rem(15px);
-      margin-right: 10px;
+      font-size: var(--font-8);
+      line-height: var(--lh-sm);
+      margin-right: $gap-min
     }
   }
 }

@@ -1,11 +1,11 @@
 .press {
   background-color: $background-press;
-  padding: 90px 0 !important;
+  padding: $gap-lg 0 !important;
   @media screen and (max-width: $tableWidth) {
-    padding: 60px 0 !important;
+    padding: $gap-bg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: 30px 0 !important;
+    padding: $gap 0 !important;
   }
 
   &__card {
@@ -16,10 +16,10 @@
     align-items: center;
     justify-content: space-between;
     background-color: $background-primary;
-    margin-top: 8px;
-    padding: 12px 45px;
+    margin-top: $gap-min;
+    padding: $gap-sm $gap-bg;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    &:first-of-type { margin-top: 12px }
+    &:first-of-type { margin-top: $gap-sm }
     @media screen and (max-width: $smDesktopWidth) {
       width: 100%;
     }
@@ -28,13 +28,13 @@
     }
     @media screen and (max-width: $phoneWidth) {
       width: 100%;
-      padding: 6px 20px;
+      padding: $gap-min $gap;
     }
   }
 
   &__logo-cont {
     max-width: 225px;
-    margin-right: 10px;
+    margin-right: $gap-min;
     @media screen and (max-width: $phoneWidth) {
       width: 100%;
     }
@@ -52,16 +52,15 @@
     color: #2644D9;
     text-decoration: underline;
     @media screen and (max-width: $smDesktopWidth) {
-      font-size: rem(14px);
-      line-height: rem(22px);
+      font-size: var(--font-14);
     }
     @media screen and (max-width: $tableWidth) {
-      font-size: rem(11px);
-      line-height: rem(18px);
+      font-size: var(--font-12);
+      line-height: var(--lh-sm);
     }
     @media screen and (max-width: $phoneWidth) {
-      font-size: rem(9px);
-      line-height: rem(15px);
+      font-size: var(--font-8);
+      line-height: var(--lh-sm);
     }
   }
 }

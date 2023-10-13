@@ -6,7 +6,7 @@
     }
   }
   &__feature-desc {
-    margin-top: 10px;
+    margin-top: $gap-min;
     @media screen and (max-width: $phoneWidth) {
       text-align: center !important;
     }
@@ -16,8 +16,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 30px;
-    margin-top: 55px;
+    column-gap: $gap;
+    margin-top: $gap-bg;
     &-logo {
       max-width: 100%;
       max-height: 100%;
@@ -26,39 +26,35 @@
       height: 100px;
       width: 200px;
       object-fit: contain;
-      margin-bottom: 30px;
+      margin-bottom: $gap;
       @media screen and (max-width: $tableWidth) {
         height: 40px;
         width: 100px;
-        margin-bottom: 15px;
+        margin-bottom: $gap-sm;
       }
       @media screen and (max-width: $phoneWidth) {
         height: 30px;
         width: 50px;
-        margin-bottom: 15px;
+        margin-bottom: $gap-sm;
       }
     }
   }
   &__comingSoon {
-    margin: 50px 0 40px 0;
-    font-family: "DM sans", sans-serif;
+    margin: $gap-bg 0 $gap-bg 0;
     color: #B2B2B2;
-    font-size: 20px;
+    font-size: var(--font-20);
     font-weight: 500;
-    line-height: 33px;
     text-align: center;
     @media screen and (max-width: $smDesktopWidth) {
-      font-size: rem(16px);
-      line-height: rem(25px);
+      font-size: var(--font-16);
     }
     @media screen and (max-width: $tableWidth) {
-      font-size: rem(13px);
-      line-height: rem(21px);
+      font-size: var(--font-14);
     }
     @media screen and (max-width: $phoneWidth) {
-      font-size: rem(12px);
-      line-height: rem(17px);
-      margin: 25px 0 20px 0;
+      font-size: var(--font-12);
+      line-height: var(--lh-sm);
+      margin: $gap 0 $gap-sm 0;
     }
   }
 }

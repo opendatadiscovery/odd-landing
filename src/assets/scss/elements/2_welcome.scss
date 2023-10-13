@@ -1,86 +1,53 @@
 .welcome {
-    padding: 50px 0;
-    @media screen and (max-width: $phoneWidth) {
-        padding: 10px 0;
+  padding: $gap-bg 0;
+  @media screen and (max-width: $phoneWidth) {
+      padding: $gap-min 0;
+  }
+
+  &__saas {
+    width: 100%;
+    background-color: $background-light;
+    padding: $gap-sm $gap-bg;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $tableWidth) {
+      flex-direction: column;
     }
 
-    &__saas {
-        width: 100%;
-        background-color: $background-light;
-        padding: 12px 32px;
-        border-radius: 8px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @media screen and (max-width: $tableWidth) {
-            flex-direction: column;
-        }
-
-        &_offer {
-            @media screen and (max-width: $tableWidth) {
-               margin-bottom: 8px;
-            }
-        }
-
-        &_offer p {
-            @media screen and (max-width: $tableWidth) {
-                text-align: center;
-            }
-        }
+    &_offer {
+      @media screen and (max-width: $tableWidth) {
+       margin-bottom: 8px;
+      }
     }
 
-    &__status {
-        margin-top: 24px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: rem(18px);
-        line-height: rem(27px);
-        color: $text-grey;
+    &_offer p {
+      @media screen and (max-width: $tableWidth) {
+        text-align: center;
+      }
     }
+  }
 
-    &__title {
-        margin-top: 20px;
-    }
+  &__status {
+    margin-top: $gap;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: var(--font-16);
+    line-height: rem(27px);
+    color: $text-grey;
+  }
 
-    &__description {
-        margin-top: 15px;
-    }
+  &__title {
+    margin-top: $gap;
+  }
 
-    &__buttons {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-top: 50px;
-        @media screen and (max-width: $phoneWidth) {
-            margin-top: 20px;
-        }
+  &__description {
+    margin-top: $gap-sm;
+  }
 
-        &_deploy {
-            color: $text-light !important;
-            background-color: $background-secondary !important;
-            @include button-hover-reverse();
-        }
-
-        &_saas {
-            padding: 12px 20px !important;
-            color: $text-light !important;
-            background-color: $background-secondary !important;
-            @media screen and (max-width: $tableWidth) {
-                padding: 6px 10px !important;
-            }
-        }
-
-        &_saas:hover {
-            color: $text-secondary !important;
-            background-color: transparent !important;
-        }
-
-        &_schedule {
-            @include button-hover();
-        }
-
-        &_demo {
-            @include button-hover();
-        }
-    }
+  &__buttons {
+    margin-top: $gap-bg;
+  }
 }

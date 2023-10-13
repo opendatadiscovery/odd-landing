@@ -1,43 +1,23 @@
 .header {
-    @include flex-rsb();
-    width: 100%; 
-    height: auto;
-    background-color: $background-primary;
-    padding: 50px 73px;
-    @media screen and (max-width: $tableWidth) {
-        padding: 30px 40px;
-    }
-    @media screen and (max-width: $phoneWidth) {
-        @include flex-cc();
-    }
+  @include flex-rsb();
+  width: 100%;
+  height: auto;
+  background-color: $background-primary;
+  padding: $gap-bg $gap-lg;
+  @media screen and (max-width: $tableWidth) {
+    padding: $gap $gap-bg;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    @include flex-cc();
+  }
 
-    &__logo-cont {
-        width: 238px;
-        min-width: 150px;
-        height: inherit;
-    }
+  &__logo-cont {
+    width: 238px;
+    min-width: 150px;
+    height: inherit;
+  }
 
-    &__logo {
-        width: 100%;
-    }
-
-    &__buttons {
-        display: flex;
-        justify-content: space-between;
-        @media screen and (max-width: $phoneWidth) {
-            margin-top: 20px;
-        }
-
-        &_slack, &_github, &_docs {
-            border-color: transparent !important;
-            color: $text-primary !important;
-            &:hover {
-                border-color: $border-dark !important;
-            }
-        }
-
-        &_start {
-            @include button-hover()
-        }
-    }
+  &__logo {
+    width: 100%;
+  }
 }
