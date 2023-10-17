@@ -1,5 +1,5 @@
 .footer {
-  padding: 80px 100px;
+  padding: $gap-lg $gap-lg;
   background-color: #010E43;
   @include flex-rsb();
   align-items: flex-start;
@@ -7,7 +7,7 @@
     @include flex-cc();
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: 30px 60px;
+    padding: $gap $gap-bg;
   }
 
   &__item-cont {
@@ -16,23 +16,24 @@
     max-width: 330px;
     width: 100%;
     height: 100%;
-    margin-right: 10px;
+    margin-right: $gap-min;
     &:last-child {margin-right: 0}
     @media screen and (max-width: $desktopWidth) {
       margin-right: 0;
-      margin-top: 30px;
+      margin-top: $gap;
     }
   }
 
   &__cont-title {
-    padding-bottom: 22px;
+    padding-bottom: $gap;
     border-bottom: 1px solid #ffffff;
   }
 
   &__logo-cont {
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    align-items: center;
+    gap: $gap-lg;
   }
 
   &__logo {
@@ -40,9 +41,9 @@
   }
 
   &__link {
-    margin-top: 30px;
+    margin-top: $gap;
     font-family: 'lato', sans-serif;
-    font-size: 15px;
+    font-size: var(--font-16);
     color: $text-light;
     display: block;
     overflow: hidden;
@@ -52,30 +53,8 @@
 
   &__cont-title {
     font-family: 'lato', sans-serif;
-    font-size: 16px;
+    font-size: var(--font-16);
     color: $text-light;
-  }
-
-  &__shedule-button-cont {
-    @media screen and (max-width: $tableWidth) {
-      text-align: center;
-    }
-  }
-
-  &__shedule-button {
-    border: 1px solid #ffffff !important;
-    padding: 26px 92px !important;
-    margin: 84px 0 0 0 !important;
-    color: #ffffff !important;
-    &:hover {
-      background-color: #ffffff;
-      color: #010E43 !important;
-      border-color: #010E43;
-    }
-    @media screen and (max-width: $tableWidth) {
-      margin: 30px 0 20px 0 !important;
-      padding: 15px 40px !important;
-    }
   }
 
   &__social-cont {
@@ -83,21 +62,17 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: $gap-min;
 
     @media screen and (min-width: $desktopWidth) {
-      margin-top: 50px;
+      margin-top: $gap-bg;
     }
-    //@media screen and (max-width: $tableWidth) {
-    //  justify-content: center;
-    //  margin-top: 10px;
-    //}
   }
 
   &__social-logo {
     width: 40px;
     height: 40px;
-    margin-right: 30px;
+    margin-right: $gap;
     color: $background-gray;
 
     &-youtube {

@@ -1,78 +1,55 @@
 .aboutData {
-    width: 1280px;
-    padding: 110px 0;
+  width: 1280px;
+  padding: 110px 0;
+  @media screen and (max-width: $phoneWidth) {
+    padding: $gap-min 0;
+  }
+
+  &__item {
+    @include flex-rsb();
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-top: $gap-lg;
+    gap: $gap;
     @media screen and (max-width: $phoneWidth) {
-        padding: 10px 0;
+      margin-top: $gap;
     }
 
-    &__item {
-        @include flex-rsb();
-        width: 100%;
-        flex-wrap: nowrap;
-        margin-top: 70px;
-        @media screen and (max-width: $phoneWidth) {
-            margin-top: 30px;
-        }
-
-        &-image {
-            max-width: 622px;
-            min-width: 320px;
-        }
-
-        &-description {
-            max-width: 475px !important;
-            height: 100%;
-            align-items: flex-start !important;
-            @media screen and (max-width: $phoneWidth) {
-                margin-top: 10px;
-            }
-        }
-
-        &_reverse { flex-direction: row-reverse }
-        @media screen and (max-width: $phoneWidth) {
-            @include flex-cc();
-            margin-top: 40px;
-        }
+    &-image {
+      max-width: 622px;
+      min-width: 320px;
     }
 
-    &__feature {
-        &-desc {
-            margin-top: 30px;
-            @media screen and (max-width: $phoneWidth) {
-                margin-top: 10px;
-            }
-        }
-
-        &-buttons {
-            margin-top: 50px;
-            display: flex;
-            flex-wrap: nowrap;
-            @media screen and (max-width: $phoneWidth) {
-                justify-content: center;
-                margin-top: 10px;
-            }
-        }
-
-        &-button {
-            padding: 8px 22px !important;
-            margin: 0 12px 0 0 !important;
-            @include button-hover();
-            @media screen and (max-width: $smDesktopWidth) {
-                padding: 6px 14px !important;
-                margin: 0 10px 0 0 !important;
-            }
-            @media screen and (max-width: $tableWidth) {
-                padding: 4px 10px !important;
-                margin: 0 10px 0 0 !important;
-            }
-            //@media screen and (max-width: $phoneWidth) {
-            //    padding: 8px 22px !important;
-            //    margin: 0 12px 0 0 !important;
-            //}
-        }
+    &-description {
+      max-width: 475px !important;
+      height: 100%;
+      align-items: flex-start !important;
+      @media screen and (max-width: $phoneWidth) {
+        margin-top: $gap-min
+      }
     }
+
+    &_reverse { flex-direction: row-reverse }
+    @media screen and (max-width: $phoneWidth) {
+      @include flex-cc();
+      margin-top: $gap-bg
+    }
+  }
+
+  &__feature {
+    &-desc {
+      margin-top: $gap;
+      @media screen and (max-width: $phoneWidth) {
+        margin-top: $gap-min;
+      }
+    }
+
+    &-buttons {
+      margin-top: $gap-bg;
+    }
+  }
 }
 
 .margin {
-    width: 100px;
+  width: 100px;
 }

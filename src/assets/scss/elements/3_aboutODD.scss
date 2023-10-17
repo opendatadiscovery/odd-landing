@@ -1,20 +1,20 @@
 .aboutODD {
-    padding: 50px 0;
+    padding: $gap-bg 0;
     @media screen and (max-width: $phoneWidth) {
-        padding: 10px 0;
+        padding: $gap-sm 0;
     }
 
     &__description {
-        margin-top: 15px;
+        margin-top: $gap-sm;
     }
 
     &__ODDImage {
-        margin-top: 40px;
+        margin-top: $gap-bg;
         width: 100%;
     }
 
     &__video_wrapper {
-        margin-top: 30px;
+        margin-top: $gap;
         width: 100%;
         position: relative;
         padding-bottom: 56.25%;

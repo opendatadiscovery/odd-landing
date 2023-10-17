@@ -1,11 +1,24 @@
 // Font
 $mainFont                : 'DM Sans', Helvetica, Arial, sans-serif;
 
+:root {
+  --lh                     : 1em;
+  --lh-sm                  : 1.3em;
+  --lh-md                  : 1.4em;
+  --lh-bg                  : 1.5em;
+  --font-8                 : 8px;
+  --font-12                : 12px;
+  --font-14                : 14px;
+  --font-16                : 16px;
+  --font-20                : 20px;
+  --font-24                : 24px;
+  --font-32                : 32px;
+  --font-44                : 44px;
+  --font-64                : 64px;
+}
+
 // Size
 $mainFontColor           : #000000;
-$mainFontSize            : 16px;
-$mainFontWeight          : 300;
-$mainLineHeight          : 1.55;
 
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 1024px;
@@ -18,11 +31,20 @@ $smPhoneWidth            : 320px;
 $iconWidth               : 40px;
 $smDesktopIconWidth      : 35px;
 
+// Gap
+$step                    : 8px;
+$gap-min                 : $step;
+$gap-sm                  : 2 * $step;
+$gap                     : 3 * $step;
+$gap-bg                  : 6 * $step;
+$gap-lg                  : 10 * $step;
+
 
 // Border Color
 $border-base             : #6A6DEE;
 $border-dark             : #000000;
 $border-card             : #EBEBEB;
+$border-light            : #ffffff;
 
 // Text Colors
 $text-primary            : #000000;
