@@ -25,7 +25,6 @@
     "scss"
   ],
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -44,6 +43,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^4.0.1",
+    "resolve-url-loader": "^5.0.0",
     "sass-loader": "^10.4.1",
     "style-loader": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",

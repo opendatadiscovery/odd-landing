@@ -1,0 +1,9 @@
+.provectus-container {
+  background: url('../../img/Provectus-bg.png') no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $indent-bg;
+  height: 400px;
+}

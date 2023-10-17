@@ -2,16 +2,16 @@
   background-color: $background-light;
   padding: 120px 0 !important;
   @media screen and (max-width: $tableWidth) {
-    padding: $gap-lg 0 !important;
+    padding: $indent-lg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $gap-bg 0 !important;
+    padding: $indent-bg 0 !important;
   }
 
 
   &__feature {
     &-title {
-      margin-top: $gap-min;
+      margin-top: $indent-min;
       @media screen and (max-width: $phoneWidth) {
         text-align: center !important;
       }}
@@ -25,14 +25,14 @@
 
   &__cards {
     margin-top: 60px;
-    gap: $gap;
+    gap: $indent;
     @include flex-rsb();
     @media screen and (max-width: $tableWidth) {
-      margin-top: $gap-bg;
+      margin-top: $indent-bg;
       @include flex-cc();
     }
     @media screen and (max-width: $phoneWidth) {
-      margin-top: $gap;
+      margin-top: $indent;
     }
   }
 }

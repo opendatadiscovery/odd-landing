@@ -1,13 +1,13 @@
 .welcome {
-  padding: $gap-bg 0;
+  padding: $indent-bg 0;
   @media screen and (max-width: $phoneWidth) {
-      padding: $gap-min 0;
+      padding: $indent-min 0;
   }
 
   &__saas {
     width: 100%;
     background-color: $background-light;
-    padding: $gap-sm $gap-bg;
+    padding: $indent-sm $indent-bg;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@
   }
 
   &__status {
-    margin-top: $gap;
+    margin-top: $indent;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: var(--font-16);
@@ -40,14 +40,14 @@
   }
 
   &__title {
-    margin-top: $gap;
+    margin-top: $indent;
   }
 
   &__description {
-    margin-top: $gap-sm;
+    margin-top: $indent-sm;
   }
 
   &__buttons {
-    margin-top: $gap-bg;
+    margin-top: $indent-bg;
   }
 }
