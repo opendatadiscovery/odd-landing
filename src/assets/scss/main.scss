@@ -119,11 +119,31 @@ li {
   &--gap-sm {
     gap: $indent-sm;
   }
+
+  &--space-between {
+    justify-content: space-between;
+  }
 }
 
 .text {
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: var(--font-14);
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: var(--font-12);
+    line-height: var(--lh-sm);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: var(--font-8);
+    line-height: var(--lh-sm);
+  }
+
   &--light {
     color: $text-light;
+  }
+
+  &--underline {
+    text-decoration: underline;
   }
 
   &--h1 {
