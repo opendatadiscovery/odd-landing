@@ -1,26 +1,20 @@
 .press {
   background-color: $background-press;
-  padding: $indent-lg 0 !important;
+  padding: $indent-lg $indent;
   @media screen and (max-width: $tableWidth) {
-    padding: $indent-bg 0 !important;
+    padding: $indent-bg $indent;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $indent 0 !important;
+    padding: $indent;
   }
 
   &__card {
     max-width: $desktopWidth;
     width: $smDesktopWidth;
     height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     background-color: $background-primary;
-    margin-top: $indent-min;
     padding: $indent-sm $indent-bg;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    &:first-of-type { margin-top: $indent-sm
-    }
     @media screen and (max-width: $smDesktopWidth) {
       width: 100%;
     }
@@ -33,35 +27,11 @@
     }
   }
 
-  &__logo-cont {
-    max-width: 225px;
-    margin-right: $indent-min;
-    @media screen and (max-width: $phoneWidth) {
-      width: 100%;
-    }
-  }
-
   &__logo {
     height: 40px;
 
-    &_odd {
+    &--odd {
       height: 25px;
-    }
-  }
-
-  &__link {
-    color: #2644D9;
-    text-decoration: underline;
-    @media screen and (max-width: $smDesktopWidth) {
-      font-size: var(--font-14);
-    }
-    @media screen and (max-width: $tableWidth) {
-      font-size: var(--font-12);
-      line-height: var(--lh-sm);
-    }
-    @media screen and (max-width: $phoneWidth) {
-      font-size: var(--font-8);
-      line-height: var(--lh-sm);
     }
   }
 }
