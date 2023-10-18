@@ -1,11 +1,11 @@
 .press {
   background-color: $background-press;
-  padding: $gap-lg 0 !important;
+  padding: $indent-lg 0 !important;
   @media screen and (max-width: $tableWidth) {
-    padding: $gap-bg 0 !important;
+    padding: $indent-bg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $gap 0 !important;
+    padding: $indent 0 !important;
   }
 
   &__card {
@@ -16,10 +16,11 @@
     align-items: center;
     justify-content: space-between;
     background-color: $background-primary;
-    margin-top: $gap-min;
-    padding: $gap-sm $gap-bg;
+    margin-top: $indent-min;
+    padding: $indent-sm $indent-bg;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    &:first-of-type { margin-top: $gap-sm }
+    &:first-of-type { margin-top: $indent-sm
+    }
     @media screen and (max-width: $smDesktopWidth) {
       width: 100%;
     }
@@ -28,13 +29,13 @@
     }
     @media screen and (max-width: $phoneWidth) {
       width: 100%;
-      padding: $gap-min $gap;
+      padding: $indent-min $indent;
     }
   }
 
   &__logo-cont {
     max-width: 225px;
-    margin-right: $gap-min;
+    margin-right: $indent-min;
     @media screen and (max-width: $phoneWidth) {
       width: 100%;
     }

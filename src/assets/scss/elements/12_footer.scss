@@ -1,5 +1,5 @@
 .footer {
-  padding: $gap-lg $gap-lg;
+  padding: $indent-lg $indent-lg;
   background-color: #010E43;
   @include flex-rsb();
   align-items: flex-start;
@@ -7,7 +7,7 @@
     @include flex-cc();
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $gap $gap-bg;
+    padding: $indent $indent-bg;
   }
 
   &__item-cont {
@@ -16,16 +16,16 @@
     max-width: 330px;
     width: 100%;
     height: 100%;
-    margin-right: $gap-min;
+    margin-right: $indent-min;
     &:last-child {margin-right: 0}
     @media screen and (max-width: $desktopWidth) {
       margin-right: 0;
-      margin-top: $gap;
+      margin-top: $indent;
     }
   }
 
   &__cont-title {
-    padding-bottom: $gap;
+    padding-bottom: $indent;
     border-bottom: 1px solid #ffffff;
   }
 
@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $gap-lg;
+    gap: $indent-lg;
   }
 
   &__logo {
@@ -41,7 +41,7 @@
   }
 
   &__link {
-    margin-top: $gap;
+    margin-top: $indent;
     font-family: 'lato', sans-serif;
     font-size: var(--font-16);
     color: $text-light;
@@ -62,17 +62,17 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-top: $gap-min;
+    margin-top: $indent-min;
 
     @media screen and (min-width: $desktopWidth) {
-      margin-top: $gap-bg;
+      margin-top: $indent-bg;
     }
   }
 
   &__social-logo {
     width: 40px;
     height: 40px;
-    margin-right: $gap;
+    margin-right: $indent;
     color: $background-gray;
 
     &-youtube {

@@ -2,15 +2,15 @@
   background-color: #F5ECF9;
   padding: 128px 0 !important;
   @media screen and (max-width: $tableWidth) {
-    padding: $gap-lg 0 !important;
+    padding: $indent-lg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $gap-bg 0 !important;
+    padding: $indent-bg 0 !important;
   }
 
   &__cards {
-    margin-top: $gap-bg;
-    gap: $gap-bg;
+    margin-top: $indent-bg;
+    gap: $indent-bg;
     @include flex-rsb();
     @media screen and (max-width: $smTableWidth) {
       @include flex-cc();
@@ -20,24 +20,24 @@
   &__card {
     display: flex;
     max-width: 522px;
-    padding: var(--P-80, $gap-lg);
+    padding: var(--P-80, $indent-lg);
     flex-direction: column;
     align-items: flex-start;
-    gap: $gap-bg;
+    gap: $indent-bg;
     border-radius: var(--R-16, 16px);
     background: $background-primary;
     @media screen and (max-width: $desktopWidth) {
-      padding: $gap-bg
+      padding: $indent-bg
     }
     @media screen and (max-width: $smTableWidth) {
       margin-right: 0;
-      margin-bottom: $gap-min;
+      margin-bottom: $indent-min;
     }
     @media screen and (max-width: $tableWidth) {
-      padding: $gap-bg;
+      padding: $indent-bg;
     }
     @media screen and (max-width: $phoneWidth) {
-      padding: $gap
+      padding: $indent
     }
   }
 
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--P-24, $gap);
+    gap: var(--P-24, $indent);
 
     & > img {
       width: 240px;

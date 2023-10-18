@@ -13,12 +13,14 @@
 @import 'elements/7_press';
 @import 'elements/9_community';
 @import 'elements/10_getStarted';
-@import 'elements/11_footer';
+@import 'elements/11_provectus';
+@import 'elements/12_footer';
 /* end site styles */
 
 html {
   line-height: var(--lh-md);
   font-size: var(--font-16);
+  font-weight: var(--font-weight-400);
   color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
@@ -95,8 +97,7 @@ li {
   width: 100%;
   flex: 0 0 auto;
   position: relative;
-  margin: $gap auto 0;
-  padding: 0 $gap;
+  padding: $indent;
 }
 
 .full-width {
@@ -105,9 +106,41 @@ li {
 
 .flex {
   display: flex;
-  gap: $gap-min;
+  align-items: center;
+  gap: $indent-min;
   @media screen and (max-width: $phoneWidth) {
-    margin-top: $gap-sm;
+    margin-top: $indent-sm;
+  }
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--gap-sm {
+    gap: $indent-sm;
+  }
+}
+
+.text {
+  &--light {
+    color: $text-light;
+  }
+
+  &--h1 {
+    font-weight: 700;
+    font-size: var(--font-32);
+    line-height: var(--lh);
+    text-align: center;
+    @media screen and (max-width: $smDesktopWidth) {
+      font-size: var(--font-32);
+    }
+    @media screen and (max-width: $tableWidth) {
+      font-size: var(--font-24);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      font-size: var(--font-20);
+      line-height: var(--lh-md);
+    }
   }
 }
 
@@ -125,15 +158,15 @@ li {
   background: $background-secondary;
   white-space: nowrap;
   @media screen and (max-width: $smDesktopWidth) {
-    padding: 0 $gap-sm;
+    padding: 0 $indent-sm;
     font-size: var(--font-14);
   }
   @media screen and (max-width: $tableWidth) {
-    padding: 0 $gap-sm;
+    padding: 0 $indent-sm;
     font-size: var(--font-12);
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: 0 $gap-min;
+    padding: 0 $indent-min;
     font-size: var(--font-8);
     line-height: var(--lh-sm);
   }
@@ -302,23 +335,23 @@ li {
   background-color: $background-primary;
   box-shadow: 0 15px 32px rgba(46, 79, 255, 0.1);
   border-radius: 5px;
-  padding: $gap-bg;
+  padding: $indent-bg;
   @media screen and (max-width: $smDesktopWidth) {
-    padding: $gap;
+    padding: $indent;
   }
   @media screen and (max-width: $tableWidth) {
     width: 100%;
     margin-right: 0;
-    margin-bottom: $gap-min;
-    padding: $gap;
+    margin-bottom: $indent-min;
+    padding: $indent;
   }
   @media screen and (max-width: $phoneWidth) {
     width: 100%;
     font-size: var(--font-12);
     line-height: var(--lh-sm);
     margin-right: 0;
-    margin-bottom: $gap-min;
-    padding: $gap-min;
+    margin-bottom: $indent-min;
+    padding: $indent-min;
   }
 }
 
@@ -326,25 +359,28 @@ li {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  margin-top: $gap-sm;
-  &:first-of-type {margin-top: $gap}
+  margin-top: $indent-sm;
+  &:first-of-type {margin-top: $indent
+  }
   @media screen and (max-width: $tableWidth) {
-    &:first-of-type {margin-top: $gap-sm}
+    &:first-of-type {margin-top: $indent-sm
+    }
   }
   @media screen and (max-width: $phoneWidth) {
-    &:first-of-type {margin-top: $gap-min}
+    &:first-of-type {margin-top: $indent-min
+    }
   }
 }
 
 .card-icon {
   width: 30px;
   height: 30px;
-  margin-right: $gap;
+  margin-right: $indent;
   display: block;
   @media screen and (max-width: $phoneWidth) {
     width: 10px;
     height: 10px;
-    margin-right: $gap-min
+    margin-right: $indent-min
   }
 }
 

@@ -6,6 +6,7 @@ $mainFont                : 'DM Sans', Helvetica, Arial, sans-serif;
   --lh-sm                  : 1.3em;
   --lh-md                  : 1.4em;
   --lh-bg                  : 1.5em;
+  --font-weight-400        : 400;
   --font-8                 : 8px;
   --font-12                : 12px;
   --font-14                : 14px;
@@ -33,11 +34,11 @@ $smDesktopIconWidth      : 35px;
 
 // Gap
 $step                    : 8px;
-$gap-min                 : $step;
-$gap-sm                  : 2 * $step;
-$gap                     : 3 * $step;
-$gap-bg                  : 6 * $step;
-$gap-lg                  : 10 * $step;
+$indent-min: $step;
+$indent-sm: 2 * $step;
+$indent: 3 * $step;
+$indent-bg: 6 * $step;
+$indent-lg: 10 * $step;
 
 
 // Border Color

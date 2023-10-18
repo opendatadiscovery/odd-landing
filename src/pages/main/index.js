@@ -1,5 +1,4 @@
 // JS
-
 import '../../js'
 
 // SCSS

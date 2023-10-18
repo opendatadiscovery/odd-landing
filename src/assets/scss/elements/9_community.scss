@@ -1,20 +1,20 @@
 .community {
   padding: 110px 0 !important;
   @media screen and (max-width: $smDesktopWidth) {
-    padding: $gap-lg 0 !important;
+    padding: $indent-lg 0 !important;
   }
   @media screen and (max-width: $phoneWidth) {
-    padding: $gap-bg 0 !important;
+    padding: $indent-bg 0 !important;
   }
 
   &__cards {
     display: flex;
-    margin-top: $gap-bg;
+    margin-top: $indent-bg;
     @media screen and (max-width: $smDesktopWidth) {
       @include flex-cc();
     }
     @media screen and (max-width: $phoneWidth) {
-      margin-top: $gap;
+      margin-top: $indent;
     }
   }
 
@@ -25,11 +25,11 @@
     background: $background-primary;
     border: 1px solid $border-card;
     border-radius: 10px;
-    margin-right: $gap-bg;
+    margin-right: $indent-bg;
     &:last-child {margin-right: 0}
     @media screen and (max-width: $smDesktopWidth) {
       margin-right: 0;
-      margin-bottom: $gap-min;
+      margin-bottom: $indent-min;
     }
   }
 
@@ -62,22 +62,22 @@
 
   &__card-description {
     width: 100%;
-    padding: $gap $gap-bg;
+    padding: $indent $indent-bg;
     @include flex-cc();
     align-items: flex-start;
     @media screen and (max-width: $phoneWidth) {
-      padding: $gap-sm;
+      padding: $indent-sm;
     }
   }
 
   &__card-links {
-    margin-top: $gap-min;
+    margin-top: $indent-min;
     display: flex;
     flex-wrap: nowrap
   }
 
   &__card-link {
-    margin-right: $gap-bg;
+    margin-right: $indent-bg;
     font-weight: 400;
     font-size: var(--font-16);
     color: #0A30F7;
@@ -91,7 +91,7 @@
     @media screen and (max-width: $phoneWidth) {
       font-size: var(--font-8);
       line-height: var(--lh-sm);
-      margin-right: $gap-min
+      margin-right: $indent-min
     }
   }
 }

@@ -3,9 +3,9 @@
   width: 100%;
   height: auto;
   background-color: $background-primary;
-  padding: $gap-bg $gap-lg;
+  padding: $indent-bg $indent-lg;
   @media screen and (max-width: $tableWidth) {
-    padding: $gap $gap-bg;
+    padding: $indent $indent-bg;
   }
   @media screen and (max-width: $phoneWidth) {
     @include flex-cc();
