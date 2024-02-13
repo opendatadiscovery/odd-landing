@@ -17,9 +17,7 @@ const PATHS = {
 }
 
 const PAGES_DIR = `${PATHS.src}/pages`
-const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter(fileName => fs.statSync(`${PAGES_DIR}/${fileName}`).isDirectory())
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fs.statSync(`${PAGES_DIR}/${fileName}`).isDirectory())
 
 const ENTRIES = PAGES
 
@@ -81,7 +79,7 @@ module.exports = {
           },
           {
             loader: 'resolve-url-loader',
-            options: { sourceMap: true, }
+            options: { sourceMap: true }
           },
           {
             loader: 'sass-loader',
@@ -132,7 +130,9 @@ module.exports = {
         }
       ]
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!CNAME'] // Exclude CNAME from being deleted
+    }),
     ...PAGES.map(page => {
       return new HtmlWebpackPlugin({
         template: `${PAGES_DIR}/${page}/index.html`,

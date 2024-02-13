@@ -12,6 +12,10 @@
     margin-top: $indent-bg;
     gap: $indent-bg;
     @include flex-rsb();
+    align-items: stretch;
+    @media screen and (max-width: $desktopWidth) {
+      gap: $indent;
+    }
     @media screen and (max-width: $smTableWidth) {
       @include flex-cc();
     }
@@ -19,10 +23,13 @@
 
   &__card {
     display: flex;
+    flex: 1;
     max-width: 522px;
-    padding: var(--P-80, $indent-lg);
+    min-width: 0;
+    padding: var(--P-80, $indent-md);
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     gap: $indent-bg;
     border-radius: var(--R-16, 16px);
     background: $background-primary;
