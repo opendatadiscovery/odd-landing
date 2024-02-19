@@ -1,6 +1,6 @@
 {
   "name": "odd_landing_page",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ODD Landing page",
   "main": "index.js",
   "scripts": {
