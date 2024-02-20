@@ -54,10 +54,10 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-W8Y2JMLBRS"
+      src="https://www.googletagmanager.com/gtag/js?id=G-TZ89Q59P3P"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || []
@@ -65,38 +65,16 @@
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
-      gtag('config', 'G-W8Y2JMLBRS')
+      gtag('config', 'G-TZ89Q59P3P', { anonymize_ip: true })
+      gtag('set', 'allow_google_signals', false)
+      gtag('set', 'allow_ad_personalization_signals', false)
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied'
+      })
     </script>
-
-    <!-- Global site tag (gtag.js) - Google Ads: 10888243056 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-10888243056"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'AW-10888243056')
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-WP44BZT')
-    </script>
-    <!-- End Google Tag Manager -->
   </head>
 
   <body>
