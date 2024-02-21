@@ -54,30 +54,33 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TZ89Q59P3P"
-    ></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-TZ89Q59P3P', { anonymize_ip: true })
-      gtag('set', 'allow_google_signals', false)
-      gtag('set', 'allow_ad_personalization_signals', false)
-      gtag('consent', 'default', {
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        analytics_storage: 'denied'
-      })
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-TV7DJZGX')
     </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TV7DJZGX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
       <div class="header__logo-cont">
         <a href="/"
@@ -1123,47 +1126,6 @@
           </a>
         </div>
       </div>
-
-      <script>
-        document.addEventListener('click', function (e) {
-          if (e.target.innerText == 'Deploy & Try') {
-            gtag('event', 'conversion', {
-              send_to: 'AW-10888243056/dZA8CMLOz8ADEPDO9cco'
-            })
-          }
-          if (e.target.innerText == 'Schedule Demo') {
-            gtag('event', 'conversion', {
-              send_to: 'AW-10888243056/bw7ICJ_5m8ADEPDO9cco'
-            })
-          }
-          if (e.target.innerText == 'Get started') {
-            gtag('event', 'conversion', {
-              send_to: 'AW-10888243056/wC2ICPb5m8ADEPDO9cco'
-            })
-          }
-        })
-
-        document.addEventListener('click', function (e) {
-          if (
-            e.target.matches(
-              'a[href="https://docs.opendatadiscovery.org/"] , [href="https://docs.opendatadiscovery.org/"] *'
-            )
-          ) {
-            gtag('event', 'conversion', {
-              send_to: 'AW-10888243056/7PsMCN2c8M8DEPDO9cco'
-            })
-          }
-          if (
-            e.target.matches(
-              'a[href="https://medium.com/opendatadiscovery/"] , [href="https://medium.com/opendatadiscovery/"] *'
-            )
-          ) {
-            gtag('event', 'conversion', {
-              send_to: 'AW-10888243056/5AD_CNaWpdADEPDO9cco'
-            })
-          }
-        })
-      </script>
     </footer>
   </body>
 </html>
