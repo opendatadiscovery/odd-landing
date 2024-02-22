@@ -1,0 +1,1079 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2024-02-22 10:52:30",
+    "containerVersion": {
+        "path": "accounts/6218260211/containers/178103047/versions/6",
+        "accountId": "6218260211",
+        "containerId": "178103047",
+        "containerVersionId": "6",
+        "name": "v6",
+        "description": "move tag to folder",
+        "container": {
+            "path": "accounts/6218260211/containers/178103047",
+            "accountId": "6218260211",
+            "containerId": "178103047",
+            "name": "opendatadiscovery.org",
+            "publicId": "GTM-TV7DJZGX",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1708519423619",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6218260211/containers/178103047/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-TV7DJZGX"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "3",
+                "name": "Google Analytics GA4 Configuration",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "G-TZ89Q59P3P"
+                    }
+                ],
+                "fingerprint": "1708528785563",
+                "firingTriggerId": [
+                    "2147479553",
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "4",
+                "name": "Custom Cookie Banner",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.0/dist/cookieconsent.css\">\n<style>\n.cc--light-funky {\n    color-scheme: light;\n\n    --cc-bg: #f9faff;\n    --cc-primary-color: #112954;\n    --cc-secondary-color: #112954;\n\n    --cc-btn-primary-bg: #3859d0;\n    --cc-btn-primary-color: var(--cc-bg);\n    --cc-btn-primary-hover-bg: #213657;\n    --cc-btn-primary-hover-color: #fff;\n\n    --cc-btn-secondary-bg: #dfe7f9;\n    --cc-btn-secondary-color: var(--cc-secondary-color);\n    --cc-btn-secondary-hover-bg: #c6d1ea;\n    --cc-btn-secondary-hover-color: #000;\n\n    --cc-cookie-category-block-bg: #ebeff9;\n    --cc-cookie-category-block-border: #ebeff9;\n    --cc-cookie-category-block-hover-bg: #dbe5f9;\n    --cc-cookie-category-block-hover-border: #dbe5f9;\n    --cc-cookie-category-expanded-block-hover-bg: #ebeff9;\n    --cc-cookie-category-expanded-block-bg: #ebeff9;\n\n    --cc-overlay-bg: rgba(219, 232, 255, 0.85)!important;\n\n    --cc-toggle-readonly-bg: #cbd8f1;\n    --cc-toggle-on-knob-bg: var(--cc-bg);\n    --cc-toggle-off-bg: #8fa8d6;\n    --cc-toggle-readonly-knob-bg: var(--cc-bg);\n\n    --cc-separator-border-color: #f1f3f5;\n\n    --cc-footer-border-color: #f1f3f5;\n    --cc-footer-bg: var(--cc-bg);\n\n    --cc-modal-border-radius: var(--cc-btn-border-radius);\n}\n\n.cc--light-funky #cc-main .toggle__icon:after {\n    border-radius: var(--cc-btn-border-radius);\n}\n\n.cc--light-funky #cc-main .cm__btn--close {\n    border-radius: var(--cc-btn-border-radius);\n    border-top-left-radius: 0;\n    border-top-right-radius: 0;\n}\n</style>\n<script src=\"https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0/dist/cookieconsent.umd.js\n\"></script>\n<script>\ndocument.documentElement.classList.add('cc--light-funky');\nCookieConsent.run({\n  guiOptions: {\n    consentModal: {\n      layout: 'cloud',\n      position: 'bottom center',\n      equalWeightButtons: true,\n      flipButtons: false\n    },\n    preferencesModal: {\n      layout: 'box',\n      position: 'right',\n      equalWeightButtons: true,\n      flipButtons: false\n    }\n  },\n  categories: {\n    necessary: {\n      readOnly: true\n    },\n    analytics: {\n      enabled: false\n    },\n    preferences: {\n      enabled: false\n    },\n    marketing: {\n      enabled: false\n    }\n  },\n  language: {\n    default: 'en',\n    translations: {\n      en: {\n        consentModal: {\n          title: 'We use cookies!',\n          description:\n            'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent.',\n          acceptAllBtn: 'Accept all',\n          acceptNecessaryBtn: 'Reject all',\n          showPreferencesBtn: 'Manage preferences'\n          // footer:'<a href=\"#link\">Privacy Policy</a>\\n<a href=\"#link\">Terms and conditions</a>'\n        },\n        preferencesModal: {\n          title: 'Consent Preferences Center',\n          acceptAllBtn: 'Accept all',\n          acceptNecessaryBtn: 'Reject all',\n          savePreferencesBtn: 'Save preferences',\n          closeIconLabel: 'Close modal',\n          serviceCounterLabel: 'Service|Services',\n          sections: [\n            {\n              title: 'Cookie Usage',\n              description:\n                'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. All of the data is anonymized and cannot be used to identify you.'\n            },\n            {\n              title:\n                'Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>',\n              description:\n                'These cookies are essential for the proper functioning of the website. Without these cookies, the website would not work properly.',\n              linkedCategory: 'necessary'\n            },\n            {\n              title: 'Analytics Cookies',\n              description:\n                'These cookies collect data about your visit to our website, such as which pages you view, how much time you spend on each page, and what links you click on.',\n              linkedCategory: 'analytics'\n            },\n            {\n              title: 'Preferences Cookies',\n              description:\n                'These cookies allow our website to remember choices you make and provide enhanced, more personal features. ',\n              linkedCategory: 'preferences'\n            },\n            {\n              title: 'Advertisement and Targeting cookies',\n              description:\n                'These cookies collect information about how you use the website, which pages you visited and which links you clicked on.',\n              linkedCategory: 'marketing'\n            }\n            // {\n            //   title: 'More information',\n            //   description:\n            //     'For any query in relation to my policy on cookies and your choices, please <a class=\"cc__link\" href=\"#yourdomain.com\">contact me</a>.'\n            // }\n          ]\n        }\n      }\n    }\n  },\n  onFirstConsent: function (cookie) {\n    window.dataLayer.push({ event: 'client-consent-update' })\n  }\n})\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1708531076893",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "parentFolderId": "10",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "14",
+                "name": "Consent Mode | Update Consent",
+                "type": "cvt_178103047_13",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "ad_storage",
+                        "value": "{{Consent - Marketing}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ads_data_redaction",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendDataLayer",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "ad_user_data",
+                        "value": "{{Consent - Marketing}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "security_storage",
+                        "value": "granted"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "command",
+                        "value": "update"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "functionality_storage",
+                        "value": "{{Consent - Preferences}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "personalization_storage",
+                        "value": "{{Consent - Preferences}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "url_passthrough",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "analytics_storage",
+                        "value": "{{Consent - Analytics}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "ad_personalization",
+                        "value": "{{Consent - Marketing}}"
+                    }
+                ],
+                "fingerprint": "1708531209759",
+                "firingTriggerId": [
+                    "11",
+                    "2147479572"
+                ],
+                "parentFolderId": "10",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "15",
+                "name": "GTM Consent Update",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function() {\n    window.setTimeout(function () { window.dataLayer.push({ 'event': 'gtm-consent-updated' }); }, 500);\n  })();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1708531218954",
+                "firingTriggerId": [
+                    "11"
+                ],
+                "parentFolderId": "10",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "19",
+                "name": "GA4 | Button click",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "button"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "location_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click URL}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "select_content"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-TZ89Q59P3P"
+                    }
+                ],
+                "fingerprint": "1708595903102",
+                "firingTriggerId": [
+                    "18",
+                    "25",
+                    "23",
+                    "20",
+                    "24"
+                ],
+                "parentFolderId": "16",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "tagId": "26",
+                "name": "GA4 | Lead event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enhancedUserId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_type"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "button"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "content_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "location_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click URL}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "generate_lead"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-TZ89Q59P3P"
+                    }
+                ],
+                "fingerprint": "1708595893285",
+                "firingTriggerId": [
+                    "22"
+                ],
+                "parentFolderId": "16",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_NEEDED"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "11",
+                "name": "Client Consent Update",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "client-consent-update"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1708526654110",
+                "parentFolderId": "10"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "12",
+                "name": "GTM Consent Updated",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "gtm-consent-updated"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1708526710348",
+                "parentFolderId": "10"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "17",
+                "name": "Click | All Elements",
+                "type": "CLICK",
+                "fingerprint": "1708531741479",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "18",
+                "name": "Landing | Explore Demo",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Explore Demo"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://demo.oddp.io/"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708532052403",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "20",
+                "name": "Landing | Deploy & Try",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Deploy & Try"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://github.com/opendatadiscovery/odd-platform/blob/main/docker/README.md"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708535347581",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "21",
+                "name": "Landing | Watch video",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Watch video"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://www.youtube.com/channel/UCg95yGSnMv33bOFPQXbWoGA"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708595684433",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "22",
+                "name": "Landing | Schedule call",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Schedule call"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://calendly.com/raman-damayeu/opendatadiscovery-demo"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708535447647",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "23",
+                "name": "Landing | Join ODD Slack channel",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Join ODD Slack channel"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://go.opendatadiscovery.org/slack"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708535502412",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "24",
+                "name": "Landing | Create an issue",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Create an issue"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://github.com/opendatadiscovery/odd-platform/issues"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708535575125",
+                "parentFolderId": "16"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "triggerId": "25",
+                "name": "Landing | Main Repository",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click Text}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Main Repository"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "https://github.com/opendatadiscovery"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1708535636119",
+                "parentFolderId": "16"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "variableId": "6",
+                "name": "Consent Cookie",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cc_cookie"
+                    }
+                ],
+                "fingerprint": "1708526722370",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "variableId": "7",
+                "name": "Consent - Analytics",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var cookie = {{Consent Cookie}}\n  if (!cookie) { return 'denied'; }\n  var json = JSON.parse(cookie)\n  if (json[\"categories\"].includes(\"analytics\")) {\n    return \"granted\";\n  } else {\n    return 'denied';\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1708526722373",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "variableId": "8",
+                "name": "Consent - Preferences",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var cookie = {{Consent Cookie}}\n  if (!cookie) { return 'denied'; }\n  var json = JSON.parse(cookie)\n  if (json[\"categories\"].includes(\"preferences\")) {\n    return \"granted\";\n  } else {\n    return 'denied';\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1708526722371",
+                "parentFolderId": "10",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "variableId": "9",
+                "name": "Consent - Marketing",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var cookie = {{Consent Cookie}}\n  if (!cookie) { return 'denied'; }\n  var json = JSON.parse(cookie)\n  if (json[\"categories\"].includes(\"marketing\")) {\n    return \"granted\";\n  } else {\n    return 'denied';\n  }\n}"
+                    }
+                ],
+                "fingerprint": "1708526722372",
+                "parentFolderId": "10",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "folderId": "10",
+                "name": "Consent",
+                "fingerprint": "1708526635919"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "folderId": "16",
+                "name": "Conversions",
+                "fingerprint": "1708531737861"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_PROVIDER",
+                "name": "Video Provider"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_URL",
+                "name": "Video URL"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_TITLE",
+                "name": "Video Title"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_DURATION",
+                "name": "Video Duration"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_PERCENT",
+                "name": "Video Percent"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_VISIBLE",
+                "name": "Video Visible"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_STATUS",
+                "name": "Video Status"
+            },
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "type": "VIDEO_CURRENT_TIME",
+                "name": "Video Current Time"
+            }
+        ],
+        "fingerprint": "1708595909318",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6218260211/containers/178103047/versions/6?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6218260211",
+                "containerId": "178103047",
+                "templateId": "13",
+                "name": "Consent Mode (Google tags)",
+                "fingerprint": "1708528821600",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_temp_public_id\",\n  \"__wm\": \"VGVtcGFsdGUtQXV0aG9yX0NvbnNlbnRNb2RlLVNpbW8tQWhhdmE\\u003d\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Consent Mode (Google tags)\",\n  \"categories\": [\n    \"UTILITY\",\n    \"ANALYTICS\",\n    \"ADVERTISING\"\n  ],\n  \"brand\": {\n    \"id\": \"github.com_gtm-templates-simo-ahava\",\n    \"displayName\": \"gtm-templates-simo-ahava\",\n    \"thumbnail\": \"data:image/png;base64,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\\u003d\\u003d\"\n  },\n  \"description\": \"Adjust tag behavior based on consent. This template utilizes Google\\u0027s Consent API and can be used to adjust how Google\\u0027s advertising and analytics tools use cookies and process ad identifiers.\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"command\",\n    \"displayName\": \"Consent Command\",\n    \"selectItems\": [\n      {\n        \"value\": \"default\",\n        \"displayValue\": \"Default\"\n      },\n      {\n        \"value\": \"update\",\n        \"displayValue\": \"Update\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"help\": \"\\u003cstrong\\u003eDefault\\u003c/strong\\u003e means that you establish consent settings the site falls back on until such a time that the Update command is executed. You can have multiple Default tags on the page, each corresponding to a different region, for example.\\n\\u003cstrong\\u003eUpdate\\u003c/strong\\u003e is what you\\u0027d use once you\\u0027ve retrieved a consent status from the user.\",\n    \"defaultValue\": \"default\",\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"wait_for_update\",\n    \"displayName\": \"Wait for Update\",\n    \"simpleValueType\": true,\n    \"valueUnit\": \"milliseconds\",\n    \"defaultValue\": 0,\n    \"help\": \"How long to wait (in milliseconds) for an \\u003cstrong\\u003eUpdate\\u003c/strong\\u003e command before firing Google tags that have been queued up.\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"command\",\n        \"paramValue\": \"default\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_NEGATIVE_NUMBER\"\n      }\n    ]\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"regions\",\n    \"displayName\": \"Regions\",\n    \"simpleValueType\": true,\n    \"defaultValue\": \"all\",\n    \"help\": \"Apply this setting to users from these \\u003ca href\\u003d\\\"https://en.wikipedia.org/wiki/ISO_3166-2\\\"\\u003eregions\\u003c/a\\u003e (provide a comma-separated list). If you select \\u003cstrong\\u003eall\\u003c/strong\\u003e, the setting will apply to all users.\",\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"command\",\n        \"paramValue\": \"default\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\",\n        \"errorMessage\": \"Set to \\\"all\\\" for all regions or add a comma-separated list of regions.\"\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"settings\",\n    \"displayName\": \"Consent Settings\",\n    \"groupStyle\": \"ZIPPY_OPEN\",\n    \"subParams\": [\n      {\n        \"type\": \"GROUP\",\n        \"name\": \"required\",\n        \"displayName\": \"Required for Google services\",\n        \"groupStyle\": \"NO_ZIPPY\",\n        \"subParams\": [\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"ad_storage\",\n            \"displayName\": \"ad_storage\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\",\n            \"help\": \"If set to \\u003cstrong\\u003edenied\\u003c/strong\\u003e, Google\\u0027s advertising tags and pixels will not be able to read or write first-party cookies. The use of third-party cookies is limited to only spam and fraud detection purposes. \\u003ca href\\u003d\\\"https://support.google.com/analytics/answer/9976101#behavior\\\"\\u003eMore information\\u003c/a\\u003e.\"\n          },\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"analytics_storage\",\n            \"displayName\": \"analytics_storage\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\",\n            \"help\": \"If set to \\u003cstrong\\u003edenied\\u003c/strong\\u003e, Google Analytics tags will not read or write analytics cookies, and data collected to Google Analytics will not utilize persistent cookie identifiers (the identifiers are reset with every page load). \\u003ca href\\u003d\\\"https://support.google.com/analytics/answer/9976101#behavior\\\"\\u003eMore information\\u003c/a\\u003e.\"\n          },\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"ad_user_data\",\n            \"displayName\": \"ad_user_data\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\",\n            \"help\": \"If set to \\u003cstrong\\u003edenied\\u003c/strong\\u003e, user data cannot be used with Google\\u0027s advertising solutions for audience building.\"\n          },\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"ad_personalization\",\n            \"displayName\": \"ad_personalization\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\",\n            \"help\": \"If set to \\u003cstrong\\u003edenied\\u003c/strong\\u003e, data collected on this website will not be used for remarketing in Google\\u0027s advertising solutions.\"\n          }\n        ]\n      },\n      {\n        \"type\": \"GROUP\",\n        \"name\": \"optional\",\n        \"displayName\": \"Other signals\",\n        \"groupStyle\": \"NO_ZIPPY\",\n        \"subParams\": [\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"personalization_storage\",\n            \"displayName\": \"personalization_storage\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\"\n          },\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"functionality_storage\",\n            \"displayName\": \"functionality_storage\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\"\n          },\n          {\n            \"type\": \"SELECT\",\n            \"name\": \"security_storage\",\n            \"displayName\": \"security_storage\",\n            \"macrosInSelect\": true,\n            \"selectItems\": [\n              {\n                \"value\": \"granted\",\n                \"displayValue\": \"granted\"\n              },\n              {\n                \"value\": \"denied\",\n                \"displayValue\": \"denied\"\n              }\n            ],\n            \"simpleValueType\": true,\n            \"defaultValue\": \"denied\"\n          }\n        ]\n      }\n    ]\n  },\n  {\n    \"type\": \"GROUP\",\n    \"name\": \"other\",\n    \"displayName\": \"Other Settings\",\n    \"groupStyle\": \"ZIPPY_OPEN\",\n    \"subParams\": [\n      {\n        \"type\": \"CHECKBOX\",\n        \"name\": \"url_passthrough\",\n        \"checkboxText\": \"Pass Ad Click Information Through URLs (url_passthrough)\",\n        \"simpleValueType\": true,\n        \"help\": \"Check this if you want internal links to pass advertising identifiers (\\u003cstrong\\u003egclid\\u003c/strong\\u003e, \\u003cstrong\\u003edclid\\u003c/strong\\u003e, \\u003cstrong\\u003egclsrc\\u003c/strong\\u003e, \\u003cstrong\\u003e_gl\\u003c/strong\\u003e, \\u003cstrong\\u003ewbraid\\u003c/strong\\u003e) in the link URL while waiting for consent to be granted. \\u003ca href\\u003d\\\"https://developers.google.com/tag-platform/security/guides/consent#passthroughs\\\"\\u003eRead more here\\u003c/a\\u003e.\"\n      },\n      {\n        \"type\": \"CHECKBOX\",\n        \"name\": \"ads_data_redaction\",\n        \"checkboxText\": \"Redact Ads Data (ads_data_redaction)\",\n        \"simpleValueType\": true,\n        \"help\": \"If this is checked \\u003cstrong\\u003eand\\u003c/strong\\u003e ad_storage consent status is \\u003cstrong\\u003edenied\\u003c/strong\\u003e, Google\\u0027s advertising tags will drop all advertising identifiers from the requests, and traffic will be routed through cookieless domains.\"\n      },\n      {\n        \"type\": \"CHECKBOX\",\n        \"name\": \"sendDataLayer\",\n        \"checkboxText\": \"Push dataLayer Event\",\n        \"simpleValueType\": true,\n        \"help\": \"When consent is set to \\\"default\\\", a dataLayer event with \\u003cstrong\\u003eevent: \\u0027gtm_consent_default\\u0027\\u003c/strong\\u003e is sent, together with all the consent states. When an \\\"update\\\" is fired, a dataLayer event with \\u003cstrong\\u003eevent: \\u0027gtm_consent_update\\u0027\\u003c/strong\\u003e is pushed together with details about the updated consent state.\"\n      }\n    ]\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst dataLayerPush = require('createQueue')('dataLayer');\nconst gtagSet = require('gtagSet');\nconst log = require('logToConsole');\nconst makeNumber = require('makeNumber');\nconst makeTableMap = require('makeTableMap');\nconst setDefaultConsentState = require('setDefaultConsentState');\nconst updateConsentState = require('updateConsentState');\n\n// Determine the command and the setting object\nconst consentApi = data.command === 'default' ? setDefaultConsentState : updateConsentState;\nconst settingsObject = {\n  ad_storage: data.ad_storage,\n  analytics_storage: data.analytics_storage,\n  ad_user_data: data.ad_user_data,\n  ad_personalization: data.ad_personalization,\n  personalization_storage: data.personalization_storage,\n  functionality_storage: data.functionality_storage,\n  security_storage: data.security_storage\n};\n\n// Settings specific to the \"default\" command\nif (data.command === 'default' && makeNumber(data.wait_for_update) > 0) {\n  settingsObject.wait_for_update = makeNumber(data.wait_for_update);\n}\nif (data.command === 'default' && data.regions !== 'all') {\n  settingsObject.region = data.regions.split(',').map(r => r.trim());\n}\n  \n// Set advanced settings\ngtagSet({\n  url_passthrough: data.url_passthrough || false,\n  ads_data_redaction: data.ads_data_redaction || false\n});\n\n// Set the consent state\nconsentApi(settingsObject);\n\n// Push to dataLayer if needed\nif (data.sendDataLayer) {\n  settingsObject.event = 'gtm_consent_' + data.command;\n  dataLayerPush(settingsObject);\n}\n\n// Call data.gtmOnSuccess when the tag is finished.\ndata.gtmOnSuccess();\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"dataLayer\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_consent\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"consentTypes\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"ad_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"analytics_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalization_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"functionality_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"security_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"ad_user_data\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"ad_personalization\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"write_data_layer\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keyPatterns\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"url_passthrough\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"ads_data_redaction\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: default settings sent\n  code: |-\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('setDefaultConsentState').wasCalledWith({\n      ad_storage: 'granted',\n      analytics_storage: 'denied',\n      ad_user_data: 'granted',\n      ad_personalization: 'denied',\n      personalization_storage: 'denied',\n      functionality_storage: 'denied',\n      security_storage: 'denied',\n      wait_for_update: 500\n    });\n\n    assertApi('gtmOnSuccess').wasCalled();\n- name: updated settings sent\n  code: |-\n    mockData.command = 'update';\n\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('updateConsentState').wasCalledWith({\n      ad_storage: 'granted',\n      analytics_storage: 'denied',\n      ad_user_data: 'granted',\n      ad_personalization: 'denied',\n      personalization_storage: 'denied',\n      functionality_storage: 'denied',\n      security_storage: 'denied'\n    });\n    assertApi('gtmOnSuccess').wasCalled();\n- name: extra settings sent\n  code: |-\n    mock('gtagSet', (obj) => {\n      assertThat(obj.url_passthrough).isEqualTo(true);\n      assertThat(obj.ads_data_redaction).isEqualTo(true);\n    });\n    // Call runCode to run the template's code.\n    runCode(mockData);\n\n    // Verify that the tag finished successfully.\n    assertApi('gtmOnSuccess').wasCalled();\n- name: dataLayer events generated\n  code: \"mockData.sendDataLayer = true;\\n\\nlet dlCalled = false;\\n\\nmock('createQueue',\\\n    \\ name => {\\n  return o => {\\n    if (o.event === 'gtm_consent_default' && \\n\\\n    \\        o.ad_storage === 'granted' && \\n        o.analytics_storage === 'denied'\\\n    \\ && \\n        o.ad_user_data === 'granted' &&\\n        o.ad_personalization ===\\\n    \\ 'denied' &&\\n        o.personalization_storage === 'denied' &&\\n        o.functionality_storage\\\n    \\ === 'denied' &&\\n        o.security_storage === 'denied') dlCalled = true;\\n\\\n    \\    \\n  };\\n});\\n    \\n// Call runCode to run the template's code.\\nrunCode(mockData);\\n\\\n    \\n// Verify that the tag finished successfully.\\nassertApi('gtmOnSuccess').wasCalled();\\n\\\n    assertThat(dlCalled, 'dataLayer not called with correct arguments').isEqualTo(true);\"\nsetup: |-\n  const mockData = {\n    command: 'default',\n    ad_storage: 'granted',\n    analytics_storage: 'denied',\n    ad_user_data: 'granted',\n    ad_personalization: 'denied',\n    personalization_storage: 'denied',\n    functionality_storage: 'denied',\n    security_storage: 'denied',\n    wait_for_update: 500,\n    regions: 'all',\n    url_passthrough: true,\n    ads_data_redaction: true,\n    sendDataLayer: false,\n  };\n\n\n___NOTES___\n\nCreated on 07/10/2020, 10:39:35\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "gtm-templates-simo-ahava",
+                    "repository": "consent-mode",
+                    "version": "a998feb7322d805742030e9bb487b89c475e2749",
+                    "signature": "38c3fd73dba96660e30d9a47e53a8c5e38bdd202d479af7e43877db065b6a1e8"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.0/dist/cookieconsent.css">
+<style>
+.cc--light-funky {
+    color-scheme: light;
+
+    --cc-bg: #f9faff;
+    --cc-primary-color: #112954;
+    --cc-secondary-color: #112954;
+
+    --cc-btn-primary-bg: #3859d0;
+    --cc-btn-primary-color: var(--cc-bg);
+    --cc-btn-primary-hover-bg: #213657;
+    --cc-btn-primary-hover-color: #fff;
+
+    --cc-btn-secondary-bg: #dfe7f9;
+    --cc-btn-secondary-color: var(--cc-secondary-color);
+    --cc-btn-secondary-hover-bg: #c6d1ea;
+    --cc-btn-secondary-hover-color: #000;
+
+    --cc-cookie-category-block-bg: #ebeff9;
+    --cc-cookie-category-block-border: #ebeff9;
+    --cc-cookie-category-block-hover-bg: #dbe5f9;
+    --cc-cookie-category-block-hover-border: #dbe5f9;
+    --cc-cookie-category-expanded-block-hover-bg: #ebeff9;
+    --cc-cookie-category-expanded-block-bg: #ebeff9;
+
+    --cc-overlay-bg: rgba(219, 232, 255, 0.85)!important;
+
+    --cc-toggle-readonly-bg: #cbd8f1;
+    --cc-toggle-on-knob-bg: var(--cc-bg);
+    --cc-toggle-off-bg: #8fa8d6;
+    --cc-toggle-readonly-knob-bg: var(--cc-bg);
+
+    --cc-separator-border-color: #f1f3f5;
+
+    --cc-footer-border-color: #f1f3f5;
+    --cc-footer-bg: var(--cc-bg);
+
+    --cc-modal-border-radius: var(--cc-btn-border-radius);
+}
+
+.cc--light-funky #cc-main .toggle__icon:after {
+    border-radius: var(--cc-btn-border-radius);
+}
+
+.cc--light-funky #cc-main .cm__btn--close {
+    border-radius: var(--cc-btn-border-radius);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.0/dist/cookieconsent.umd.js
+"></script>
+<script>
+document.documentElement.classList.add('cc--light-funky');
+CookieConsent.run({
+  guiOptions: {
+    consentModal: {
+      layout: 'cloud',
+      position: 'bottom center',
+      equalWeightButtons: true,
+      flipButtons: false
+    },
+    preferencesModal: {
+      layout: 'box',
+      position: 'right',
+      equalWeightButtons: true,
+      flipButtons: false
+    }
+  },
+  categories: {
+    necessary: {
+      readOnly: true
+    },
+    analytics: {
+      enabled: false
+    },
+    preferences: {
+      enabled: false
+    },
+    marketing: {
+      enabled: false
+    }
+  },
+  language: {
+    default: 'en',
+    translations: {
+      en: {
+        consentModal: {
+          title: 'We use cookies!',
+          description:
+            'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent.',
+          acceptAllBtn: 'Accept all',
+          acceptNecessaryBtn: 'Reject all',
+          showPreferencesBtn: 'Manage preferences'
+          // footer:'<a href="#link">Privacy Policy</a>\n<a href="#link">Terms and conditions</a>'
+        },
+        preferencesModal: {
+          title: 'Consent Preferences Center',
+          acceptAllBtn: 'Accept all',
+          acceptNecessaryBtn: 'Reject all',
+          savePreferencesBtn: 'Save preferences',
+          closeIconLabel: 'Close modal',
+          serviceCounterLabel: 'Service|Services',
+          sections: [
+            {
+              title: 'Cookie Usage',
+              description:
+                'We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. All of the data is anonymized and cannot be used to identify you.'
+            },
+            {
+              title:
+                'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
+              description:
+                'These cookies are essential for the proper functioning of the website. Without these cookies, the website would not work properly.',
+              linkedCategory: 'necessary'
+            },
+            {
+              title: 'Analytics Cookies',
+              description:
+                'These cookies collect data about your visit to our website, such as which pages you view, how much time you spend on each page, and what links you click on.',
+              linkedCategory: 'analytics'
+            },
+            {
+              title: 'Preferences Cookies',
+              description:
+                'These cookies allow our website to remember choices you make and provide enhanced, more personal features. ',
+              linkedCategory: 'preferences'
+            },
+            {
+              title: 'Advertisement and Targeting cookies',
+              description:
+                'These cookies collect information about how you use the website, which pages you visited and which links you clicked on.',
+              linkedCategory: 'marketing'
+            }
+            // {
+            //   title: 'More information',
+            //   description:
+            //     'For any query in relation to my policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.'
+            // }
+          ]
+        }
+      }
+    }
+  },
+  onFirstConsent: function (cookie) {
+    window.dataLayer.push({ event: 'client-consent-update' })
+  }
+})
+</script>
