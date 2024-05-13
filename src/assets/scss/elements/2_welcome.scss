@@ -5,11 +5,11 @@
   }
 
   &__saas {
+    display: none;
     width: 100%;
     background-color: $background-light;
     padding: $indent-sm $indent-bg;
     border-radius: 8px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 
